@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView, DetailView
-from .models import Post
+from django.views.generic import TemplateView, DetailView, ListView
+from .models import Article, Author
 
 # Create your views here.
 
@@ -23,13 +23,25 @@ class HistoryPageView(TemplateView):
 class ModelPageView(TemplateView):
     template_name = 'model.html'
 
-class PublicPageView(TemplateView):
+class ArticlePageView(ListView):
+    model = Article
+    context_object_name = 'public_list'
     template_name = 'public.html'
 
 class ContactsPageView(TemplateView):
     template_name = 'contacts.html'
 
-class PublicDetailView(DetailView):
-    model = Post
+class ArticleDetailView(DetailView):
+    model = Article
     template_name = 'public_detail.html'
     context_object_name = 'public_detail'
+
+class AuthorsListView(ListView):
+    model = Author
+    template_name = 'authors.html'
+    context_object_name = 'authors_list'
+
+class AuthorDetailView(DetailView):
+    model = Author
+    template_name = 'author_detail.html'
+    context_object_name = 'author_detail'

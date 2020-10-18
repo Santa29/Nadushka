@@ -26,8 +26,8 @@ class Article(models.Model):
     name = models.CharField("Название", max_length=512)
     date = models.DateField("Дата написания", null=True, blank=True)
     authors = models.ManyToManyField(Author, verbose_name='Авторы', related_name='article_authors')
-    url = models.SlugField(max_length=160, unique=True, blank=True)
-    journal = models.CharField("Жкрнал", max_length=512)
+    url = models.CharField(max_length=160, unique=True, blank=True)
+    journal = models.CharField("Журнал", max_length=512)
 
     def __str__(self):
         return self.name
@@ -39,3 +39,8 @@ class Article(models.Model):
         verbose_name = "Статья"
         verbose_name_plural = "Статьи"
         ordering = ["date"]
+
+class Post(models.Model):
+    head = models.CharField(max_length=512)
+    body = models.TextField()
+    image = models.ImageField("Картинка", upload_to="images/")

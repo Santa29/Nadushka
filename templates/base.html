@@ -10,7 +10,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <div class="container.fluid">
-            <div class="row justify-content-md-center">
+            <div class="row justify-content-md-center" style="background-color: #B0E0E6;">
                 <div class="col xs-12 col-md-2">
                     <img src="{% static 'img1.jpg' %}" class="rounded-circle float-right" alt="Здесь Надя">
                 </div>
@@ -28,7 +28,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     
         <title>LSFM</title>
-        <div class="container.fluid">
+        <div class="container-fluid">
             <div class="row justify-content-md-center">
                 <div class="col-sm">
                   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -97,7 +97,7 @@
                 </ol>
             </nav>
             <div class="row justify-content-center">
-                <div class="col-12 col-xs-2">
+                <div class="col-12 col-sm-2">
                     <div class="card" style="width: 18rem;">
                         <img src="{% static 'img2.jpg' %}" class="card-img-top" alt="...">
                         <div class="card-body">
@@ -107,7 +107,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-xs-5">
+                <div class="col-12 col-sm">
                     <div class="card">
                         <div class="card-body">
                             {% block content %}
@@ -116,7 +116,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-xs-2">
+                <div class="col-12 col-sm-2">
                     <div class="card" style="width: 18rem;">
                         <img src="{% static 'img3.jpg' %}" class="card-img-top" alt="...">
                         <div class="card-body">
@@ -134,10 +134,14 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     </body>
     <footer>
-        <address>
-            <strong>LCFM</strong><br />
-            MSU, FBB<br />
-            119992 г. Москва, ГСП-2, Ленинские горы МГУ 1, стр. 73, НИИ ФХБ им.А.Н.Белозерского, комната 530. <br />
-            <abbr title="Phone">P:</abbr> (495) 939-59-44
-          </address>
+        <div class="row justify-content-center" style="background-color: #B0E0E6;">
+          <div class="col-12-xs-5">
+            <address>
+              <strong>LSFM</strong><br />
+              MSU, FBB<br />
+              119992 г. Москва, ГСП-2, Ленинские горы МГУ 1, стр. 73, НИИ ФХБ им.А.Н.Белозерского, комната 530. <br />
+              <abbr title="Phone">P:</abbr> (495) 939-59-44
+            </address>
+          </div>
+        </div>
     </footer>

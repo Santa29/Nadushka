@@ -2,16 +2,25 @@
 
 {% extends 'base.html' %}
 
+{% load static %}
+
+{% block breadcrumb %}
+<li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+<li class="breadcrumb-item active" aria-current="page">Authors</li>
+{% endblock breadcrumb %}
+
 {% block content %}
     {% for author in authors_list %}
         <div class="card">
             <div class="card-header">
-                <span class="font-weight-bold">{{author.name}}</span>
+                <span class="font-weight-bold"><a href="{% url 'author_detail' author.pk %}">{{author.name}}</a></span>
                 <span class="text-muted">{{author.position}}</span>
             </div>
             <div class="card-body">
+                {{author.pk}}
+                {{author.articles.all}}
                 <p>
-                    <img source = "{{author.image.url}}" class="img-fluid">
+                    <img src="{{ author.image.url }}" class="img-fluid" alt="">
                 </p>
             </div>
         </div>

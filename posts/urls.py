@@ -14,5 +14,5 @@ urlpatterns = [
     path('contacts/', views.ContactsPageView.as_view(), name = 'contacts'),
     path('public/<int:pk>/detail/', views.ArticleDetailView.as_view(), name = 'article_detail'),
     path('structure/authors/', views.AuthorsListView.as_view(), name = 'authors_list'),
-    path('structure/authors/<str:slug>', views.AuthorDetailView.as_view(), name = "author_detail")
+    path('structure/authors/<int:pk>', views.AuthorDetailView.as_view(), name = "author_detail")
 ]

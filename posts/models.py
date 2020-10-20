@@ -9,6 +9,8 @@ class Author(models.Model):
     name = models.CharField("ФИО", max_length=256)
     image = models.ImageField("Изображение", upload_to="authors/")
     position = models.CharField("Должность", max_length=256)
+    description = models.CharField("Описание", max_length=512, blank=True)
+    abbr = models.CharField("Аббривеатура", max_length=20, blank=True)
 
     def __str__(self):
         return self.name

@@ -1,5 +1,7 @@
 from django.contrib import admin
 from django.urls import path, include
+from django.conf import settings
+from django.conf.urls.static import static
 
 from . import views
 
@@ -15,4 +17,4 @@ urlpatterns = [
     path('public/<int:pk>/detail/', views.ArticleDetailView.as_view(), name = 'article_detail'),
     path('structure/authors/', views.AuthorsListView.as_view(), name = 'authors_list'),
     path('structure/authors/<int:pk>', views.AuthorDetailView.as_view(), name = "author_detail")
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

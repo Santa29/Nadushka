@@ -11,18 +11,33 @@
 
 {% block content %}
     {% for author in authors_list %}
-        <div class="card">
-            <div class="card-header">
-                <span class="font-weight-bold"><a href="{% url 'author_detail' author.pk %}">{{author.name}}</a></span>
-                <span class="text-muted">{{author.position}}</span>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">
+                        <span class="font-weight-bold"><a href="{% url 'author_detail' author.pk %}">{{author.name}}</a></span>
+                        <span class="text-muted">{{author.position}}</span>
+                    </div>
+                    <div class="card-body">
+                        <p>
+                            <img src="{{ author.image.url }}" class="img-fluid" alt="">
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        {{author.description}}
+                    </div>
+                </div>
             </div>
-            <div class="card-body">
-                {{author.pk}}
-                {{author.articles.all}}
-                <p>
-                    <img src="{{ author.image.url }}" class="img-fluid" alt="">
-                </p>
+            <div class="col-sm-6">
+                {% for article in author.article_authors.all %}
+                    <p>{{article.name}} |
+                    <a href="#">See more</a> |
+                    <a href="{{article.url}}">Link</a>
+                    </p>
+                {% endfor %}
             </div>
         </div>
+    </div>
     {% endfor %}
 {% endblock content %}

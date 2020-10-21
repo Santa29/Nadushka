@@ -30,6 +30,7 @@ class Article(models.Model):
     authors = models.ManyToManyField(Author, verbose_name='Авторы', related_name='article_authors')
     url = models.CharField(max_length=160, unique=True, blank=True)
     journal = models.CharField("Журнал", max_length=512)
+    abstract = models.TextField("Абстракт", blank=True)
 
     def __str__(self):
         return self.name

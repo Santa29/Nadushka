@@ -3,102 +3,83 @@
 {% load static %}
 
 <!doctype html>
+    <title>LSFM</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <head>
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-        <div class="container.fluid">
-            <div class="row justify-content-md-center" style="background-color: #B0E0E6;">
-                <div class="col xs-12 col-md-2">
-                    <img src="{% static 'img1.jpg' %}" class="rounded-circle float-right" alt="Здесь Надя">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+          <a class="navbar-brand" href="{% url 'home' %}">LSFM</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'about' %}">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'history' %}">History</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'model' %}">Model</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'public' %}">Public</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'resource' %}">Resource</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'structure' %}">Structure</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'contacts' %}">Contacts</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'authors_list' %}">Authors</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Links
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Something else here</a>
                 </div>
-                <div class="col-md-auto">
-                    <h1><i>Laboratory of structure and functions of mitochondria</i></h1>
-                    <h3>A. N. Belozersky Research Institute of Physico-Chemical Biology MSU</h3>
-                </div>
-                <div class="col xs-12 col-md-2">
-                    <a href="#" class="btn btn-primary btn-lg active" tabindex="-1" role="button" aria-disabled="true">Rus</a>
-                    <a href="#" class="btn btn-secondary btn-lg active" tabindex="-1" role="button" aria-disabled="true">Eng</a>
-                </div>
-            </div>
+              </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+          </div>
+        </nav>
+        <div class="jumbotron" style="background-color: #B0E0E6;">
+          <h1 class="display-4">Laboratory of structure and functions of mitochondria</h1>
+          <p class="lead">A. N. Belozersky Research Institute of Physico-Chemical Biology MSU</p>
+          <hr class="my-4">
+          <a class="btn btn-primary btn-lg" href="{% url 'authors_list' %}" role="button">Our team</a>
         </div>
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    
-        <title>LSFM</title>
-        <div class="container-fluid">
-            <div class="row justify-content-md-center">
-                <div class="col-sm">
-                  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-                      <a class="navbar-brand" href="{% url 'home' %}">LSFM</a>
-                      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                      </button>
-                      
-                      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav mr-auto">
-                          <li class="nav-item active">
-                            <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" href="{% url 'about' %}">About</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" href="{% url 'history' %}">History</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" href="{% url 'model' %}">Model</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" href="{% url 'public' %}">Public</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" href="{% url 'resource' %}">Resource</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" href="{% url 'structure' %}">Structure</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" href="{% url 'contacts' %}">Contacts</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" href="{% url 'authors_list' %}">Authors</a>
-                          </li>
-                          <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              Links
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                              <a class="dropdown-item" href="#">Action</a>
-                              <a class="dropdown-item" href="#">Another action</a>
-                              <div class="dropdown-divider"></div>
-                              <a class="dropdown-item" href="#">Something else here</a>
-                            </div>
-                          </li>
-                        </ul>
-                        <form class="form-inline my-2 my-lg-0">
-                          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                        </form>
-                      </div>
-                  </nav>
-                </div>
-            </div>
-        </div>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            {% block breadcrumb %}
+            {% endblock breadcrumb %}
+          </ol>
+        </nav>
     </head>
     <body>
         <div class="container-fluid">
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                  {% block breadcrumb %}
-                  {% endblock breadcrumb %}
-                </ol>
-            </nav>
-            <div class="row justify-content-center">
-                <div class="col-12 col-sm-2">
-                    <div class="card" style="width: 18rem;">
+            <div class="row">
+                <div class="col-sm-2">
+                   <div class="card" style="width: 18rem;">
                         <img src="{% static 'img2.jpg' %}" class="card-img-top" alt="...">
                         <div class="card-body">
                           <h5 class="card-title">Сюда втыкать фотографии сотрудников, добавить карусель</h5>
@@ -107,7 +88,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-sm">
+                <div class="col-sm">
                     <div class="card">
                         <div class="card-body">
                             {% block content %}

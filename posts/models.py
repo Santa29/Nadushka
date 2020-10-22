@@ -10,13 +10,13 @@ class Author(models.Model):
     image = models.ImageField("Изображение", upload_to="authors/")
     position = models.CharField("Должность", max_length=256)
     description = models.CharField("Описание", max_length=512, blank=True)
-    abbr = models.CharField("Аббривеатура", max_length=20, blank=True)
+    slug = models.SlugField("Аббривеатура", max_length=20, unique=True)
 
     def __str__(self):
         return self.name
     
     def get_absolute_url(self):
-        return reverse('author_detail', kwargs={"slug": self.name})
+        return reverse('author_detail', kwargs={"slug": self.slug})
 
     class Meta:
         verbose_name = "Автор"

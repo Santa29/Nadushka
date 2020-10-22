@@ -9,9 +9,12 @@
 {% endblock breadcrumb %}
 
 {% block content %}
+    <h1>
+        {{author.name}}
+    </h1>
     {% for article in author.article_authors.all %}
         <p>{{article.name}}</p>
         <p>{{article.body</p>
-        <a href="{{article.url}}">Link</a>
+        <a href="#">Link</a>
     {% endfor %}
 {% endblock content %}

@@ -11,9 +11,13 @@
     {% for article in public_list %}
         <h2><p>{{article.name}}</p></h2>
         {{article.abstract}}
-        {% for author in article.article_authors.all %}
-            <p>{{author.name}}</p>
-            <a href="#">Link</a>
+        {% for author in article.authors.all %}
+        <div class="card">
+            <div class="card-body">
+                <p>{{author.name}}</p>
+                <a href="{% url 'author_detail' author.slug %}">Link</a>
+            </div>
+        </div>
         {% endfor %}
     {% endfor %}
 {% endblock content %}

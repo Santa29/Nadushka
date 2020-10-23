@@ -4,9 +4,10 @@
 
 {% block breadcrumb %}
 <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
-<li class="breadcrumb-item active" aria-current="page">Publication</li>
+<li class="breadcrumb-item"><a href="{% url 'public' %}">Publication</a></li>
+<li class="breadcrumb-item active" aria-current="page">{{public_detail.name}}</li>
 {% endblock breadcrumb %}
 
 {% block content %}
-
+    {{public_detail.name}}
 {% endblock content %}

@@ -9,7 +9,7 @@
 
 {% block content %}
     {% for article in public_list %}
-        <h2><p>{{article.name}}</p></h2>
+        <h2><p><a href="{% url 'article_detail' article.pk %}">{{article.name}}</a></p></h2>
         {{article.abstract}}
         {% for author in article.authors.all %}
         <div class="card">

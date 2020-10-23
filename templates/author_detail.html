@@ -5,16 +5,16 @@
 {% block breadcrumb %}
 <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
 <li class="breadcrumb-item"><a href="{% url 'authors_list' %}">Authors</a></li>
-<li class="breadcrumb-item active" aria-current="page">{{author.abbr}}</li>
+<li class="breadcrumb-item active" aria-current="page">{{author_detail.name}}</li>
 {% endblock breadcrumb %}
 
 {% block content %}
     <h1>
-        {{author.name}}
+        {{author_detail.name}}
     </h1>
-    {% for article in author.article_authors.all %}
+    {% for article in author_detail.article_authors.all %}
         <p>{{article.name}}</p>
-        <p>{{article.body</p>
-        <a href="#">Link</a>
+        <p>{{article.body}}</p>
+        <a href="{% url 'article_detail' article.pk %}">Link</a>
     {% endfor %}
 {% endblock content %}

@@ -11,6 +11,8 @@ django = "*"
 django-crispy-forms = "*"
 pillow = "*"
 rosetta = "*"
+bs4 = "*"
+lxml = "*"
 
 [requires]
 python_version = "3.8"

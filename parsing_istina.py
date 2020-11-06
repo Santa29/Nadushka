@@ -1,5 +1,4 @@
 from bs4 import BeautifulSoup
-<<<<<<< HEAD
 import requests as req
 
 resp = req.get("https://istina.msu.ru/profile/andnadya/")
@@ -24,11 +23,3 @@ for el in list_of_a_tags:
     elif "jornals" in el.text:
         list_of_jornals.append(el)
 print(list_of_authors, list_of_jornals, list_of_publications)
-=======
-import requests as rq
-import lxml
-
-page = rq.get("https://istina.msu.ru/profile/andnadya/")
-soup = BeautifulSoup(page.text, 'lxml')
-print(soup)
->>>>>>> 61fb51d859865130eff4c42635a70bcbf5bd4d3b

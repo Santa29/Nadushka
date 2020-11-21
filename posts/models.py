@@ -11,7 +11,7 @@ class Author(models.Model):
     position = models.CharField("Должность", max_length=256)
     description = models.CharField("Описание", max_length=512, blank=True)
     slug = models.SlugField("Аббривеатура", max_length=20, unique=True)
-    istina_author_id = models.CharField(max_length=160, blank=True, unique=True)
+    istina_author_ref = models.CharField("Ссылка на сотрудника", max_length=160, unique=True)
 
     def __str__(self):
         return self.name
@@ -32,7 +32,7 @@ class Article(models.Model):
     url = models.CharField(max_length=160, unique=True, blank=True)
     journal = models.CharField("Журнал", max_length=512)
     abstract = models.TextField("Абстракт", blank=True)
-    istina_article_id = models.CharField(max_length=160, blank=True, unique=True)
+    istina_article_id = models.CharField(max_length=160, unique=True)
 
     def __str__(self):
         return self.name

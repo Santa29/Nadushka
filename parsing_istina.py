@@ -6,6 +6,23 @@ class Publication():
     jornal = ''
     ref = ''
 
+
+list_of_referenses_to_parse = [
+    "https://istina.msu.ru/profile/andnadya/",
+    "https://istina.msu.ru/profile/popkov-v/",
+    "https://istina.msu.ru/profile/BabenkoVA/",
+    "https://istina.msu.ru/profile/SilachevDN/",
+    "https://istina.msu.ru/profile/Pevzner_IB/",
+    "https://istina.msu.ru/profile/lju/",
+    "https://istina.msu.ru/profile/zorov/",
+    "https://istina.msu.ru/profile/pleg/",
+    "https://istina.msu.ru/profile/brezgunova/"
+]
+
+dict_of_authors_ref = {
+    "/workers/60585830/": "andNadya"
+}
+
 resp = req.get("https://istina.msu.ru/profile/andnadya/")
 
 soup = BeautifulSoup(resp.text, 'lxml')

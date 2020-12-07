@@ -7,6 +7,18 @@ class Publication():
     ref = ''
 
 
+def add_to_publications_list(ref):
+    resp = req.get(ref)
+
+    soup = BeautifulSoup(resp.text, 'lxml')
+
+    # Count the publications and create the list of empty Publication classes
+    for el in soup.find_all("a", href=True):
+        if "publication" in el["href"]:
+            publication_list_links.append(el["href"])
+            print(el["href"])
+
+
 list_of_referenses_to_parse = [
     "https://istina.msu.ru/profile/andnadya/",
     "https://istina.msu.ru/profile/popkov-v/",
@@ -23,36 +35,13 @@ dict_of_authors_ref = {
     "/workers/60585830/": "andNadya"
 }
 
-resp = req.get("https://istina.msu.ru/profile/andnadya/")
-
-soup = BeautifulSoup(resp.text, 'lxml')
-
-list_of_a_tags = []
-for el in soup.find_all("a", href=True):
-    list_of_a_tags.append(el)
-
-
-i = 0
-for el in list_of_a_tags:
-    if "publications" in el['href']:
-        i+=1
 publication_list = []
-for public in range(i):
-    publication_list.append(Publication())
+publication_list_links = []
 
+if __name__ == "main":
 
-counter = -1
-for el in list_of_a_tags:
-    if "publications" in el['href']:
-        counter+=1
-        publication_list[counter].ref = el['href']
-    elif "workers" in el['href'] and "style" not in el['href']:
-        publication_list[counter].list_of_authors.append(el['href'])
-    elif "jornals" in el["href"]:
-        publication_list[counter].jornal = el['href']
+    for elem in list_of_referenses_to_parse:
+        add_to_publications_list(elem)
 
-for el in publication_list:
-    print(el.ref + '\n')
-    print(el.jornal)
-    el.list_of_authors = set(el.list_of_authors)
-    print(el.list_of_authors)
+    print(publication_list_links)
+

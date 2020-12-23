@@ -8,6 +8,7 @@ class Publication():
 
 
 def add_to_publications_list(ref):
+    """Get the list of all publications from all authors"""
     resp = req.get(ref)
 
     soup = BeautifulSoup(resp.text, 'lxml')
@@ -18,6 +19,13 @@ def add_to_publications_list(ref):
             publication_list_links.append(el["href"])
             print(el["href"])
 
+def read_the_publication_data(ref):
+    """Read and return detail information about current publication"""
+    resp = req.get(ref)
+
+    soup = BeautifulSoup(resp.text(), 'lxml')
+    print(soup)
+    return soup
 
 list_of_referenses_to_parse = [
     "https://istina.msu.ru/profile/andnadya/",
@@ -40,8 +48,8 @@ publication_list_links = []
 
 if __name__ == "main":
 
-    for elem in list_of_referenses_to_parse:
-        add_to_publications_list(elem)
+    #for elem in list_of_referenses_to_parse:
+    #    add_to_publications_list(elem)
 
-    print(publication_list_links)
-
+    #print(publication_list_links)
+    read_the_publication_data("https://istina.msu.ru/publications/article/291399133/")

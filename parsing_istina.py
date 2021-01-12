@@ -1,42 +1,37 @@
 from bs4 import BeautifulSoup
 import requests as req
+import time
 
 class Publication():
     list_of_authors = []
     jornal = ''
     ref = ''
+    article_id = ''
+
+def search_articles(list_of_terms):
+    base = 'https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term='
+    tail = '&usehistory=y&email=michaels17525@mail.ru'
+    dict_of_WebEnv = {}
+    for el in list_of_terms:
+        time.sleep(2)
+        resp = req.get(base + el + tail)
+        soup = BeautifulSoup(resp.text, 'xml')
+        print(soup.find('WebEnv').text)
+        dict_of_WebEnv[el] = soup.find('WebEnv').text
+    return dict_of_WebEnv
 
 
-def add_to_publications_list(ref):
-    """Get the list of all publications from all authors"""
-    resp = req.get(ref)
-
-    soup = BeautifulSoup(resp.text, 'lxml')
-
-    # Count the publications and create the list of empty Publication classes
-    for el in soup.find_all("a", href=True):
-        if "publication" in el["href"]:
-            publication_list_links.append(el["href"])
-            print(el["href"])
-
-def read_the_publication_data(ref):
-    """Read and return detail information about current publication"""
-    resp = req.get(ref)
-
-    soup = BeautifulSoup(resp.text(), 'lxml')
-    print(soup)
-    return soup
 
 list_of_referenses_to_parse = [
-    "https://istina.msu.ru/profile/andnadya/",
-    "https://istina.msu.ru/profile/popkov-v/",
-    "https://istina.msu.ru/profile/BabenkoVA/",
-    "https://istina.msu.ru/profile/SilachevDN/",
-    "https://istina.msu.ru/profile/Pevzner_IB/",
-    "https://istina.msu.ru/profile/lju/",
-    "https://istina.msu.ru/profile/zorov/",
-    "https://istina.msu.ru/profile/pleg/",
-    "https://istina.msu.ru/profile/brezgunova/"
+    "Andrianova+NV",
+    "Popkov+VA",
+    "Babenko+VA",
+    "Silachev+DN",
+    "Pevzner+IB",
+    "Zorova+LD",
+    "Zorov+SD",
+    "plotnikov+EY",
+    "Brezgunova+AA"
 ]
 
 dict_of_authors_ref = {
@@ -46,10 +41,5 @@ dict_of_authors_ref = {
 publication_list = []
 publication_list_links = []
 
-if __name__ == "main":
-
-    #for elem in list_of_referenses_to_parse:
-    #    add_to_publications_list(elem)
-
-    #print(publication_list_links)
-    read_the_publication_data("https://istina.msu.ru/publications/article/291399133/")
+if __name__ == "__main__":
+    search_articles(list_of_referenses_to_parse)

@@ -3,11 +3,12 @@ import requests as req
 import time
 
 class Publication():
-    def __init__(self, list, jornal, ref, id):
+    def __init__(self, list, jornal, ref, id_article, data):
         self.list_of_authors = list
         self.jornal = jornal
         self.article_ref = ref
-        self.article_id = id
+        self.article_id = id_article
+        self.data = data
 
 def get_MCID_and_number_of_publications(list_of_terms):
     base = 'https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term='
@@ -24,15 +25,22 @@ def get_articles(list_of_MCID):
     base = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&WebEnv="
     tail = "&query_key=1&rettype=abstract"
     temporary_list_of_articles = []
+    ids = []
+    data = []
+    title = []
     for el in list_of_MCID.keys():
         time.sleep(2)
         resp = req.get(base + el[0] + tail)
         soup = BeautifulSoup(resp.text, 'xml')
         temporary_list_of_articles.append(soup)
+        authors = []
+        jornals = []
+        title.append((soup.find_all('ArticleTitle')).text.split())
+        ids.append((soup.find_all('PMID')).text.split())
+        data.append((soup.find_all('DateRevised')).text.split())
+        for i in range(int(el[1])):
+            pass
     return temporary_list_of_articles
-
-def create_list_of_articles(temporary_list, list_of_MCID):
-    pass
 
 def connect_to_db_and_read_data():
     pass

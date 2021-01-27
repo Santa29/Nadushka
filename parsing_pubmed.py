@@ -18,28 +18,18 @@ def get_MCID_and_number_of_publications(list_of_terms):
         time.sleep(2)
         resp = req.get(base + el + tail)
         soup = BeautifulSoup(resp.text, 'xml')
-        dict_of_WebEnv[el] = [soup.find('WebEnv').text, soup.find('Count').text]
+        dict_of_WebEnv[el] = soup.find('WebEnv').text
     return dict_of_WebEnv
 
 def get_articles(list_of_MCID):
     base = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&WebEnv="
     tail = "&query_key=1&rettype=abstract"
     temporary_list_of_articles = []
-    ids = []
-    data = []
-    title = []
-    for el in list_of_MCID.keys():
+    for el in list_of_MCID.values():
         time.sleep(2)
-        resp = req.get(base + el[0] + tail)
+        resp = req.get(base + el + tail)
         soup = BeautifulSoup(resp.text, 'xml')
-        temporary_list_of_articles.append(soup)
-        authors = []
-        jornals = []
-        title.append((soup.find_all('ArticleTitle')).text.split())
-        ids.append((soup.find_all('PMID')).text.split())
-        data.append((soup.find_all('DateRevised')).text.split())
-        for i in range(int(el[1])):
-            pass
+        temporary_list_of_articles.append(soup.find_all('PubmedArticle'))
     return temporary_list_of_articles
 
 def connect_to_db_and_read_data():
@@ -70,4 +60,5 @@ publication_list_links = []
 
 if __name__ == "__main__":
     dict_of_authors_ref = get_MCID_and_number_of_publications(list_of_referenses_to_parse)
+    get_articles(dict_of_authors_ref)
     print(dict_of_authors_ref)

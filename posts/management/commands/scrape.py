@@ -9,10 +9,10 @@ from posts.models import Article, Author
 class Publication():
     def __init__(self, authors, jornal, ref, id_article, data, text, title):
         self.list_of_authors = authors
-        self.jornal = jornal
+        self.journal = jornal
         self.article_ref = ref
         self.article_id = id_article
-        self.data = data
+        self.date = data
         self.text = text
         self.title = title
 
@@ -43,12 +43,31 @@ class Command(BaseCommand):
             dict_of_WebEnv[el] = soup.find('WebEnv').text
         return dict_of_WebEnv
 
-    def create_link(self, list_of_authors, article_to_create_link):
+    def create_link(self, article_to_create_link):
         """This function create the link between article and authors which contains in the database"""
-        Author.objects.all()
-        for el in list_of_authors:
+        for el in article_to_create_link.list_of_authors:
             try:
-                Author.objects.get(name=el)
+                author = Author.objects.get(name=el)
+                if author in Author.objects.all():
+                    author.spares.add(article_to_create_link)
+                    author.save()
+            except:
+                pass
+    
+    def create_articles(self, articles):
+        "This function create and update the articles from BD"
+        for el in articles:
+            try:
+                Article.objects.update_or_create(
+                    istina_article_id = el.article_id,
+                    defaults = dict(
+                        name = el.title,
+                        date = el.date.strftime("%Y-%m-%d"),
+                        url = el.article_ref,
+                        journal = el.journal,
+                        abstract = el.text,
+                    )
+                )
             except:
                 pass
 
@@ -78,3 +97,10 @@ class Command(BaseCommand):
                 date = datetime.strptime(date, "%Y %m %d")
                 temporary_list_of_articles.append(Publication(authors, jornal, ref, pubmed_id, date, abstract_text, article_title))
         return temporary_list_of_articles
+    
+    def handle(self, *args, **options):
+        temp = self.get_MCID_and_number_of_publications(self.list_of_referenses_to_parse)
+        list_of_articles = self.get_articles(temp)
+        self.create_articles(list_of_articles)
+        for el in list_of_articles:
+            self.create_link(el)

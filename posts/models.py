@@ -28,7 +28,7 @@ class Author(models.Model):
 class Article(models.Model):
     name = models.CharField("Название", max_length=512)
     date = models.DateField("Дата написания", null=True, blank=True)
-    authors = models.ManyToManyField(Author, verbose_name='Авторы', related_name='article_authors')
+    authors = models.ManyToManyField(Author, verbose_name='Авторы', related_name='article_authors', blank=True)
     url = models.CharField(max_length=160, unique=True, blank=True)
     journal = models.CharField("Журнал", max_length=512)
     abstract = models.TextField("Абстракт", blank=True)

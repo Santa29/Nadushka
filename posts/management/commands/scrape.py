@@ -45,14 +45,16 @@ class Command(BaseCommand):
 
     def create_link(self, article_to_create_link):
         """This function create the link between article and authors which contains in the database"""
-        for el in article_to_create_link.list_of_authors:
-            try:
-                author = Author.objects.get(name=el)
-                if author in Author.objects.all():
-                    author.spares.add(article_to_create_link)
-                    author.save()
-            except:
-                pass
+        try:
+            base = Article.objects.get(istina_article_id = article_to_create_link.article_id)
+            for author in article_to_create_link.list_of_authors:
+                try:
+                    base.authors.add(Author.objects.get(slug=author))
+                    base.save()
+                except:
+                    pass
+        except:
+            print("Article not found!")
     
     def create_articles(self, articles):
         "This function create and update the articles from BD"

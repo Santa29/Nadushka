@@ -1,10 +1,11 @@
 from django.core.management.base import BaseCommand
 
+from posts.models import Article, Author
+
 from bs4 import BeautifulSoup
 import requests as req
-from time import sleep
+from time import sleep, time
 from datetime import datetime
-from posts.models import Article, Author
 
 class Publication():
     def __init__(self, authors, jornal, ref, id_article, data, text, title):
@@ -17,19 +18,16 @@ class Publication():
         self.title = title
 
 class Command(BaseCommand):
-    list_of_referenses_to_parse = [
-    "Andrianova+NV",
-    "Popkov+VA",
-    "Babenko+VA",
-    "Silachev+DN",
-    "Pevzner+IB",
-    "Zorova+LD",
-    "Zorov+SD",
-    "Plotnikov+EY",
-    "Brezgunova+AA"
-    ]
+    list_of_referenses_to_parse = []
 
     dict_of_authors_ref = {}
+
+    def create_list_of_references(self, list_of_referenses_to_parse):
+        """Create the list which contains all of the authors in the db in special format to search them in pubmed db"""
+        for author in Author.objects.all():
+            temp = author.lastname + '+' + author.firstname[0] + author.thirdname[0]
+            list_of_referenses_to_parse.append(temp)
+        return list_of_referenses_to_parse
 
     def get_MCID_and_number_of_publications(self, list_of_terms):
         """This function get MCID data from pubmed and return dictionary in author:MCID format"""
@@ -52,7 +50,7 @@ class Command(BaseCommand):
                     base.authors.add(Author.objects.get(slug=author))
                     base.save()
                 except:
-                    pass
+                    print("Can't save the object")
         except:
             print("Article not found!")
     
@@ -71,7 +69,7 @@ class Command(BaseCommand):
                     )
                 )
             except:
-                pass
+                print("Already created and/or updated version in db")
 
     def get_articles(self, list_of_MCID):
         """This function get the dictionary which contains MCID and parse the article data from this MCID to the list of Publication objects"""
@@ -101,8 +99,19 @@ class Command(BaseCommand):
         return temporary_list_of_articles
     
     def handle(self, *args, **options):
+        start = time()
+        self.list_of_referenses_to_parse = self.create_list_of_references(self.list_of_referenses_to_parse)
+        print(time() - start)
+        start = time()
         temp = self.get_MCID_and_number_of_publications(self.list_of_referenses_to_parse)
+        print(time() - start)
+        start = time()
         list_of_articles = self.get_articles(temp)
+        print(time() - start)
+        start = time()
         self.create_articles(list_of_articles)
+        print(time() - start)
+        start = time()
         for el in list_of_articles:
             self.create_link(el)
+        print(time() - start)

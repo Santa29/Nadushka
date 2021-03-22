@@ -12,6 +12,9 @@ class Author(models.Model):
     description = models.CharField("Описание", max_length=512, blank=True)
     slug = models.SlugField("Аббривеатура", max_length=20, unique=True)
     istina_author_ref = models.CharField("Ссылка на сотрудника", max_length=160, unique=True)
+    firstname = models.CharField("Имя", max_length=25)
+    lastname = models.CharField("Фамилия", max_length=40)
+    thirdname = models.CharField("Отчество", max_length=40)
 
     def __str__(self):
         return self.name

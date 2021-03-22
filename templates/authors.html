@@ -29,10 +29,13 @@
             </div>
             <div class="col-sm-6">
                 {% for article in author.article_authors.all %}
+                {% if article.date.year > 2000 %}
                     <p>{{article.name}} |
-                    <a href="#">See more</a> |
-                    <a href="{{article.url}}">Link</a>
+                    <a href={% url 'article_detail' article.pk %}>See more</a> |
+                    <a href="{{article.url}}">Link</a> |
+                    {{article.date}}
                     </p>
+                {% endif %}
                 {% endfor %}
             </div>
         </div>

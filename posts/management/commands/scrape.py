@@ -35,7 +35,7 @@ class Command(BaseCommand):
         tail = '&usehistory=y&email=michaels17525@mail.ru'
         dict_of_WebEnv = {}
         for el in list_of_terms:
-            sleep(2)
+            sleep(1)
             resp = req.get(base + el + tail)
             soup = BeautifulSoup(resp.text, 'xml')
             dict_of_WebEnv[el] = soup.find('WebEnv').text
@@ -50,9 +50,9 @@ class Command(BaseCommand):
                     base.authors.add(Author.objects.get(slug=author))
                     base.save()
                 except:
-                    print("Can't save the object")
+                    pass
         except:
-            print("Article not found!")
+            pass
     
     def create_articles(self, articles):
         "This function create and update the articles from BD"
@@ -69,7 +69,7 @@ class Command(BaseCommand):
                     )
                 )
             except:
-                print("Already created and/or updated version in db")
+                pass
 
     def get_articles(self, list_of_MCID):
         """This function get the dictionary which contains MCID and parse the article data from this MCID to the list of Publication objects"""
@@ -77,7 +77,7 @@ class Command(BaseCommand):
         tail = "&query_key=1&rettype=abstract&email=michaels17525@mail.ru"
         temporary_list_of_articles = []
         for el in list_of_MCID.values():
-            sleep(2)
+            sleep(1)
             resp = req.get(base + el + tail)
             soup = BeautifulSoup(resp.text, 'xml')
             for article in soup.find_all('PubmedArticle'):

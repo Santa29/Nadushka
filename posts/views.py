@@ -1,5 +1,8 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView, DetailView, ListView
+from django.core.paginator import Paginator
+
+
 from .models import Article, Author
 
 # Create your views here.

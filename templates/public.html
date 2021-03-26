@@ -8,14 +8,26 @@
 {% endblock breadcrumb %}
 
 {% block content %}
-    {% for article in public_list %}
-    {% if article.date.year > 2000 %}
-        <h2><p><a href="{% url 'article_detail' article.pk %}">{{article.name}}</a></p></h2>
-        {{article.abstract}}
+<div class="card-columns">
+  {% for article in public_list %}
+  {% if article.date.year > 2000 %}
+    <div class = "card" style="max-width: 30vw;">
+      <div class="card-header">
+        <a href="{% url 'article_detail' article.pk %}">{{article.name}}</a>
+      </div>
+      <div class="card-body">
+        <div class="overflow-auto">
+          {{article.abstract}}
+        </div>
+      </div>
+      <div class ="card-footer">
         <p>Authors:</p>
         {% for author in article.authors.all %}
-          <p><a href={% url 'author_detail' author.slug%}>{{author.name}}</p>
+          <li><a class="btn btn-primary" href="{% url 'author_detail' author.slug%}" role="button">{{author.name}}</a>
         {% endfor %}
-    {% endif %}
-    {% endfor %}
+      </div>
+    </div>
+  {% endif %}
+  {% endfor %}
+</div>
 {% endblock content %}

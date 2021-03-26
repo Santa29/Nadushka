@@ -99,19 +99,9 @@ class Command(BaseCommand):
         return temporary_list_of_articles
     
     def handle(self, *args, **options):
-        start = time()
         self.list_of_referenses_to_parse = self.create_list_of_references(self.list_of_referenses_to_parse)
-        print(time() - start)
-        start = time()
         temp = self.get_MCID_and_number_of_publications(self.list_of_referenses_to_parse)
-        print(time() - start)
-        start = time()
         list_of_articles = self.get_articles(temp)
-        print(time() - start)
-        start = time()
         self.create_articles(list_of_articles)
-        print(time() - start)
-        start = time()
         for el in list_of_articles:
             self.create_link(el)
-        print(time() - start)

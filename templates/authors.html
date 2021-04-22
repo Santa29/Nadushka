@@ -12,7 +12,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-6">
-                <div class="card">
+                <div class="card" style="height: 70vh;">
                     <div class="card-header">
                         <span class="font-weight-bold"><a href="{% url 'author_detail' author.slug %}">{{author.name}}</a></span>
                         <p>
@@ -20,7 +20,7 @@
                     </div>
                     <div class="card-body">
                         <p>
-                            <img src="{{ author.image.url }}" class="img-fluid" alt="" width="400" height="400">
+                            <img src="{{ author.image.url }}" class="img-fluid" alt="" width="400" height="50vh">
                         </p>
                     </div>
                     <div class="card-footer">
@@ -29,15 +29,18 @@
                 </div>
             </div>
             <div class="col-sm-6">
-                {% for article in author.article_authors.all %}
-                {% if article.date.year > 2000 %}
-                    <p>{{article.name}} |
-                    <a href={% url 'article_detail' article.pk %}>See more</a> |
-                    <a href="{{article.url}}">Link</a> |
-                    {{article.date}}
-                    </p>
-                {% endif %}
-                {% endfor %}
+                <div class="card" style="height: 70vh; overflow: auto;">
+                    {% for article in author.article_authors.all %}
+                    {% if article.date.year > 2000 %}
+                        <p>{{article.name}}</p>
+                        <p>
+                        ( <a href={% url 'article_detail' article.pk %}>See more</a> |
+                        <a href="{{article.url}}">Link</a> |
+                        {{article.date}} )
+                        </p>
+                    {% endif %}
+                    {% endfor %}
+                </div>
             </div>
         </div>
     </div>

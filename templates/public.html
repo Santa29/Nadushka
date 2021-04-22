@@ -11,16 +11,14 @@
 <div class="card-columns">
   {% for article in public_list %}
   {% if article.date.year > 2000 %}
-    <div class = "card" style="max-width: 30vw;">
-      <div class="card-header">
+    <div class = "card" style="max-width: 30vw; height: 80vh;">
+      <div class="card-header" style="height: 10vh">
         <a href="{% url 'article_detail' article.pk %}">{{article.name}}</a>
       </div>
-      <div class="card-body">
-        <div class="overflow-auto">
-          {{article.abstract}}
-        </div>
+      <div class="card-body" style="height: 50vh; overflow: auto;">
+        {{article.abstract}}
       </div>
-      <div class ="card-footer">
+      <div class ="card-footer" style="height: 20vh; overflow: auto;">
         <p>Authors:</p>
         {% for author in article.authors.all %}
           <li><a class="btn btn-primary" href="{% url 'author_detail' author.slug%}" role="button">{{author.name}}</a>

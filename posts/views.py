@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView, DetailView, ListView
-from django.core.paginator import Paginator
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 
 from .models import Article, Author
@@ -30,6 +30,7 @@ class ArticlePageView(ListView):
     model = Article
     context_object_name = 'public_list'
     template_name = 'public.html'
+    paginate_by = 9
 
 class ContactsPageView(TemplateView):
     template_name = 'contacts.html'
@@ -48,3 +49,7 @@ class AuthorDetailView(DetailView):
     model = Author
     template_name = 'author_detail.html'
     context_object_name = 'author_detail'
+
+class SearchResultView(ListView):
+    model = Article
+    template_name = "search_results.html"

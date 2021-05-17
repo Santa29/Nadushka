@@ -10,8 +10,7 @@
 {% block content %}
 <div class="card-columns">
   {% for article in public_list %}
-  {% if article.date.year > 2000 %}
-    <div class = "card" style="max-width: 30vw; height: 80vh;">
+    <div class = "card" style="height: 80vh;">
       <div class="card-header" style="height: 10vh">
         <a href="{% url 'article_detail' article.pk %}">{{article.name}}</a>
       </div>
@@ -25,7 +24,7 @@
         {% endfor %}
       </div>
     </div>
-  {% endif %}
   {% endfor %}
 </div>
+{% include "paginator.html" with page=public_list %}
 {% endblock content %}

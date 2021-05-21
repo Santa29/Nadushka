@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView, DetailView, ListView
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.db.models import Q
 
 
 from .models import Article, Author
@@ -32,6 +33,10 @@ class ArticlePageView(ListView):
     template_name = 'public.html'
     paginate_by = 9
 
+    def get_queryset(self):
+        queryset = Article.objects.all().order_by('-date')
+        return queryset
+
 class ContactsPageView(TemplateView):
     template_name = 'contacts.html'
 
@@ -53,3 +58,8 @@ class AuthorDetailView(DetailView):
 class SearchResultView(ListView):
     model = Article
     template_name = "search_results.html"
+
+    def get_queryset(self, req):
+        return Article.objects.filter(
+            Q(name__icontains=req) | Q(abstract__icontains=req) | Q(authors__icontains=req)
+        )

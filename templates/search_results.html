@@ -1,3 +1,7 @@
 <!--templates/search_results.html-->
 
 {% extends "base.html" %}
+
+<form action="{% url 'search' %}" method="get">
+  <input name="q" type="text" placeholder="Search...">
+</form>

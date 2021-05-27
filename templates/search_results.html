@@ -2,6 +2,33 @@
 
 {% extends "base.html" %}
 
-<form action="{% url 'search' %}" method="get">
-  <input name="q" type="text" placeholder="Search...">
-</form>
+{% block breadcrumb %}
+<li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+<li class="breadcrumb-item active" aria-current="page">Search results</li>
+{% endblock breadcrumb %}
+
+{% block content %}
+<div class="card-columns">
+{% if search_list %}
+  {% for article in search_list %}
+    <div class = "card" style="height: 80vh;">
+      <div class="card-header" style="height: 10vh">
+        <a href="{% url 'article_detail' article.pk %}">{{article.name}}</a>
+      </div>
+      <div class="card-body" style="height: 50vh; overflow: auto;">
+        {{article.abstract}}
+      </div>
+      <div class ="card-footer" style="height: 20vh; overflow: auto;">
+        <p>Authors:</p>
+        {% for author in article.authors.all %}
+          <li><a class="btn btn-primary" href="{% url 'author_detail' author.slug %}" role="button">{{author.name}}</a>
+        {% endfor %}
+      </div>
+    </div>
+  {% endfor %}
+</div>
+{% else %}
+  <p>No results</p>
+{% endif %}
+{% include "paginator.html" with page=search_list %}
+{% endblock content %}

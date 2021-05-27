@@ -55,11 +55,29 @@ class AuthorDetailView(DetailView):
     template_name = 'author_detail.html'
     context_object_name = 'author_detail'
 
-class SearchResultView(ListView):
+class SearchResultViewSimple(ListView):
     model = Article
     template_name = "search_results.html"
+    context_object_name = 'search_list'
 
-    def get_queryset(self, req):
-        return Article.objects.filter(
-            Q(name__icontains=req) | Q(abstract__icontains=req) | Q(authors__icontains=req)
-        )
+    def get(self, request, *args, **kwargs):
+        context = {}
+
+        question = self.request.GET.get('q')
+        if question != None:
+            search_articles = Article.objects.filter(
+                Q(name__icontains=question) | Q(abstract__icontains=question)
+                ).order_by('-date')
+
+            context['last_question'] = '?q=%s' % question
+
+            current_page = Paginator(search_articles, 9)
+
+            page = request.GET.get('page')
+            try:
+                context['search_list'] = current_page.page(page)
+            except PageNotAnInteger:
+                context['search_list'] = current_page.page(1)
+            except EmptyPage:
+                context['search_list'] = current_page.page(current_page.num_pages)
+        return render(request, template_name=self.template_name, context=context)

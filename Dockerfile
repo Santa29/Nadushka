@@ -2,7 +2,7 @@
 FROM python:3.8.5-alpine
 
 # set work directory
-WORKDIR /usr/src/app
+WORKDIR /usr/src/Nadushka
 
 # set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1

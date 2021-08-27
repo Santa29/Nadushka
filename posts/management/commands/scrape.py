@@ -4,7 +4,7 @@ from posts.models import Article, Author
 
 from bs4 import BeautifulSoup
 import requests as req
-from time import sleep, time
+from time import sleep
 from datetime import datetime
 
 class Publication():

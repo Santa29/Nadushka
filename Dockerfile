@@ -18,3 +18,7 @@ RUN apk add jpeg-dev zlib-dev freetype-dev lcms2-dev openjpeg-dev tiff-dev tk-de
 RUN pip install -r requirements.txt
 
 COPY . .
+
+EXPOSE 8000
+
+CMD ["/usr/src/Nadushka/runserver.sh"]

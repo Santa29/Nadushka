@@ -14,6 +14,7 @@ rosetta = "*"
 bs4 = "*"
 lxml = "*"
 requests = "*"
+django-environ = "*"
 
 [requires]
 python_version = "3.8"

@@ -1,7 +1,7 @@
 #!/bin/bash
 
-cd /var/app
-export PYTHONPATH=/var/app;$PYTHONPATH
+cd /usr/src/Nadushka/
+export PYTHONPATH=/usr/src/Nadushka;$PYTHONPATH
 
 python manage.py migrate --noinput
 python manage.py initDB

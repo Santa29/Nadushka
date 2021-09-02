@@ -86,11 +86,11 @@ WSGI_APPLICATION = 'proj.wsgi.application'
 DATABASES = {
     'default': {
         "ENGINE": env("SQL_ENGINE"),
-        "NAME": env("SQL_DATABASE"),
-        "USER": env("SQL_USER"),
-        "PASSWORD": env("SQL_PASSWORD"),
-        "HOST": env("SQL_HOST"),
-        "PORT": env("SQL_PORT"),
+        "NAME": env("POSTGRES_DB"),
+        "USER": env("POSTGRES_USER"),
+        "PASSWORD": env("POSTGRESS_PASSWORD"),
+        "HOST": env("DB_HOST"),
+        "PORT": env("DB_PORT"),
     }
 }
 

@@ -6,4 +6,4 @@ export PYTHONPATH=/usr/src/Nadushka;$PYTHONPATH
 python manage.py migrate --noinput
 python manage.py initDB
 python manage.py scrape
-python manage.py runserver 0.0.0.0:8080
+python manage.py runserver 0.0.0.0:8000

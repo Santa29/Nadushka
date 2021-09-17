@@ -10,8 +10,7 @@ services:
     volumes:
       - ./pgdata:/var/lib/posgresql/data
   web:
-    build: 
-      context: .
+    build: /app
     ports: 
       - "8000:8000"
     env_file: 

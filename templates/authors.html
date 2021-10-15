@@ -3,8 +3,8 @@
 {% extends 'base.html' %}
 
 {% block breadcrumb %}
-<li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
-<li class="breadcrumb-item active" aria-current="page">Authors</li>
+<li class="breadcrumb-item"><a href="{% url 'home' %}">{% trans 'BreadcrumbHomePage' %}</a></li>
+<li class="breadcrumb-item active" aria-current="page">{% trans 'BreadcrumbAuthorList' %}</li>
 {% endblock breadcrumb %}
 
 {% block content %}
@@ -34,8 +34,8 @@
                     {% if article.date.year > 2000 %}
                         <p>{{article.name}}</p>
                         <p>
-                        ( <a href={% url 'article_detail' article.pk %}>See more</a> |
-                        <a href="{{article.url}}">Link</a> |
+                        ( <a href={% url 'article_detail' article.pk %}>{% trans 'ArticleDetailLink' %}</a> |
+                        <a href="{{article.url}}">{% trans 'Link' %}</a> |
                         {{article.date}} )
                         </p>
                     {% endif %}

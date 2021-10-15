@@ -11,21 +11,6 @@ from .models import Article, Author
 
 class HomePageView(TemplateView):
     template_name = 'home.html'
-    
-class AboutPageView(TemplateView):
-    template_name = 'about.html'
-
-class ResourcePageView(TemplateView):
-    template_name = 'resource.html'
-
-class StructurePageView(TemplateView):
-    template_name = 'structure.html'
-
-class HistoryPageView(TemplateView):
-    template_name = 'history.html'
-
-class ModelPageView(TemplateView):
-    template_name = 'model.html'
 
 class ArticlePageView(ListView):
     model = Article

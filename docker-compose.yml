@@ -5,18 +5,20 @@ services:
     image: postgres:12.0-alpine
     env_file: 
       ./proj/.env
-    ports: 
-      - "5432"
     volumes:
       - ./pgdata:/var/lib/posgresql/data
   web:
-    build: /app
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports: 
       - "8000:8000"
+    links:
+      - db:db
     env_file: 
       ./proj/.env
     depends_on: 
       - db
-    command: python manage.py runserver
+    command: python manage.py runserver 0.0.0.0:8000
 volumes: 
   pgdata:

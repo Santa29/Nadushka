@@ -2,10 +2,12 @@
 {% extends 'base.html' %}
 
 {% block breadcrumb %}
-<li class="breadcrumb-item active" aria-current="page">Home</li>
+<li class="breadcrumb-item active" aria-current="page">{% trans 'BreadcrumbHomePage' %}</li>
 {% endblock breadcrumb %}
 
 {% block content %}
+{% trans 'HomePageMainText' %}
+{% trans 'HomePageAboutText' %}
 <p>
     Лаборатория структуры и функции митохондрий<br>
     Научно-исследовательского института физико-химической биологии им.А.Н.Белозерского<br>

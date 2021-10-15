@@ -3,10 +3,10 @@
 {% extends 'base.html' %}
 
 {% block breadcrumb %}
-<li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
-<li class="breadcrumb-item active" aria-current="page">Contacts</li>
+<li class="breadcrumb-item"><a href="{% url 'home' %}">{% trans 'BreadcrumbHomePage' %}</a></li>
+<li class="breadcrumb-item active" aria-current="page">{% trans 'BreacrumbContacts' %}</li>
 {% endblock breadcrumb %}
 
 {% block content %}
-
+{% trans 'ContactsMainPage' %}
 {% endblock content %}

@@ -3,8 +3,8 @@
 {% extends 'base.html' %}
 
 {% block breadcrumb %}
-<li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
-<li class="breadcrumb-item"><a href="{% url 'public' %}">Publication</a></li>
+<li class="breadcrumb-item"><a href="{% url 'home' %}">{% trans 'BreadcrumbHomePage' %}</a></li>
+<li class="breadcrumb-item"><a href="{% url 'public' %}">{% trans 'BreadcrumbPublicList' %}</a></li>
 <li class="breadcrumb-item active" aria-current="page">{{public_detail.name}}</li>
 {% endblock breadcrumb %}
 

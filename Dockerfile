@@ -11,13 +11,12 @@ ENV PYTHONUNBUFFERED 1
 
 # install dependencies
 RUN pip install --upgrade pip
-COPY requirements.txt /var/app/requirements.txt
-RUN pip install -r requirements.txt
+COPY requierements.txt /var/app/requierements.txt
 RUN apk update && apk add --no-cache --virtual build-deps python3-dev musl-dev && apk add postgresql-dev
 RUN apk add --update --no-cache g++ libxslt-dev
 RUN apk --update add libxml2-dev libffi-dev gcc musl-dev libgcc openssl-dev curl
 RUN apk add jpeg-dev zlib-dev freetype-dev lcms2-dev openjpeg-dev tiff-dev tk-dev tcl-dev
-RUN pip install -r requirements.txt
+RUN pip install -r requierements.txt
 
 COPY . /var/app/.
 

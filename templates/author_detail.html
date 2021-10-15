@@ -2,9 +2,10 @@
 
 {% extends 'base.html' %}
 
+
 {% block breadcrumb %}
-<li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
-<li class="breadcrumb-item"><a href="{% url 'authors_list' %}">Authors</a></li>
+<li class="breadcrumb-item"><a href="{% url 'home' %}">{% trans 'BreadcrumbHomePage' %}</a></li>
+<li class="breadcrumb-item"><a href="{% url 'authors_list' %}">{% trans 'BreadcrumbAuthorList' %}</a></li>
 <li class="breadcrumb-item active" aria-current="page">{{author_detail.name}}</li>
 {% endblock breadcrumb %}
 
@@ -15,6 +16,6 @@
     {% for article in author_detail.article_authors.all %}
         <p>{{article.name}}</p>
         <p>{{article.body}}</p>
-        <a href="{% url 'article_detail' article.pk %}">Link</a>
+        <a href="{% url 'article_detail' article.pk %}">{% trans Link %}</a>
     {% endfor %}
 {% endblock content %}

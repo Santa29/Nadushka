@@ -1,0 +1,63 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-14 17:10+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\templates\author_detail.html:7 .\templates\authors.html:6
+#, fuzzy
+#| msgid "NavBarHomePage"
+msgid "BreadcrumbHomePage"
+msgstr "Homepage"
+
+#: .\templates\author_detail.html:8 .\templates\authors.html:7
+#, fuzzy
+#| msgid "NavBarAuthorsList"
+msgid "BreadcrumbAuthorList"
+msgstr "Authors"
+
+#: .\templates\authors.html:37
+msgid "ArticleDetailLink"
+msgstr ""
+
+#: .\templates\authors.html:38
+msgid "Link"
+msgstr ""
+
+#: .\templates\base.html:16
+msgid "LabName"
+msgstr "LSFW"
+
+#: .\templates\base.html:24
+msgid "NavBarHomePage"
+msgstr "Homepage"
+
+#: .\templates\base.html:24
+msgid "BaseTemplateCurrent"
+msgstr "(current)"
+
+#: .\templates\base.html:27
+msgid "NavBarPublicList"
+msgstr "Publications"
+
+#: .\templates\base.html:30
+msgid "NavBarContacts"
+msgstr "Contacts"
+
+#: .\templates\base.html:33
+msgid "NavBarAuthorsList"
+msgstr "Authors"

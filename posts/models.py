@@ -27,7 +27,6 @@ class Author(models.Model):
         verbose_name_plural = "Авторы"
 
 
-
 class Article(models.Model):
     name = models.CharField("Название", max_length=512)
     date = models.DateField("Дата написания", null=True, blank=True)

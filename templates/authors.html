@@ -2,6 +2,8 @@
 
 {% extends 'base.html' %}
 
+{% load i18n %}
+
 {% block breadcrumb %}
 <li class="breadcrumb-item"><a href="{% url 'home' %}">{% trans 'BreadcrumbHomePage' %}</a></li>
 <li class="breadcrumb-item active" aria-current="page">{% trans 'BreadcrumbAuthorList' %}</li>
@@ -17,10 +19,17 @@
                         <span class="font-weight-bold"><a href="{% url 'author_detail' author.slug %}">{{author.name}}</a></span>
                         <p>
                         <span class="text-muted">{{author.position}}</span>
+                        </p>
+                        <p>
+                        <a href="{{author.istina_author_ref}}">{% trans 'IstinaReferense' %}</a>
+                        </p>
+                        <p>
+                        <a href="{{author.google_sholar_reference}}">{% trans 'GoogleSholarReferense' %}</a>
+                        </p>
                     </div>
                     <div class="card-body" style="height: 60vh">
                         <p>
-                            <img src="{{ author.image.url }}" class="img-fluid" style="height: 50vh">
+                            <img src="{{ author.image.url }}" class="img-fluid" style="height: 45vh">
                         </p>
                     </div>
                     <div class="card-footer">

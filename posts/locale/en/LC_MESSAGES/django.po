@@ -1,0 +1,140 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-20 13:38+0300\n"
+"PO-Revision-Date: 2021-10-19 16:33+0000\n"
+"Last-Translator:   <>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Translated-Using: django-rosetta 0.9.7\n"
+
+#: .\posts\models.py:10
+msgid "ФИО"
+msgstr "FCs"
+
+#: .\posts\models.py:11
+msgid "Изображение"
+msgstr "Image"
+
+#: .\posts\models.py:12
+msgid "Должность"
+msgstr "Position"
+
+#: .\posts\models.py:13
+msgid "Описание"
+msgstr "Description"
+
+#: .\posts\models.py:14
+msgid "Аббривеатура"
+msgstr "Abbreviation"
+
+#: .\posts\models.py:15
+msgid "Ссылка на сотрудника в системе истина"
+msgstr "Istina author reference"
+
+#: .\posts\models.py:16
+msgid "Имя на английском с заглавной буквы"
+msgstr "Firstname from capital letter"
+
+#: .\posts\models.py:17
+msgid "Фамилия на английском с заглавной буквы"
+msgstr "Second name from capital letter"
+
+#: .\posts\models.py:18
+msgid "Отчество на английском с заглавной буквы"
+msgstr "Third name from capital letter"
+
+#: .\posts\models.py:19
+msgid "Ссылка на сотрудника в системе Google Sholar"
+msgstr "Google scholar author reference"
+
+#: .\posts\models.py:28
+msgid "Автор"
+msgstr "Author"
+
+#: .\posts\models.py:29
+msgid "Авторы"
+msgstr "Authors"
+
+#: .\posts\models.py:33
+msgid "Название"
+msgstr "Name"
+
+#: .\posts\models.py:34
+msgid "Дата написания"
+msgstr "Date"
+
+#: .\posts\models.py:37
+msgid "Журнал"
+msgstr "Jornal"
+
+#: .\posts\models.py:38
+msgid "Абстракт"
+msgstr "Abstract"
+
+#: .\posts\models.py:48
+msgid "Статья"
+msgstr "Paper"
+
+#: .\posts\models.py:49
+msgid "Статьи"
+msgstr "Papers"
+
+#, fuzzy
+#~ msgid "BreadcrumbHomePage"
+#~ msgstr "Homepage"
+
+#, fuzzy
+#~ msgid "BreadcrumbAuthorList"
+#~ msgstr "Authors"
+
+#~ msgid "LabName"
+#~ msgstr "LSFW"
+
+#~ msgid "NavBarHomePage"
+#~ msgstr "Homepage"
+
+#~ msgid "BaseTemplateCurrent"
+#~ msgstr "(current)"
+
+#~ msgid "NavBarPublicList"
+#~ msgstr "Publications"
+
+#~ msgid "NavBarContacts"
+#~ msgstr "Contacts"
+
+#~ msgid "NavBarAuthorsList"
+#~ msgstr "Authors"
+
+#, fuzzy
+#~ msgid "BreacrumbContacts"
+#~ msgstr "Contacts"
+
+#~ msgid "ContactsMainPage"
+#~ msgstr "Contacts"
+
+#, fuzzy
+#~ msgid "BreadcrumbPublicList"
+#~ msgstr "Authors"
+
+#, fuzzy
+#~ msgid "PublicAuthorListLink"
+#~ msgstr "Authors"
+
+#, fuzzy
+#~ msgid "BreadcrumbSearch"
+#~ msgstr "Homepage"
+
+#~ msgid "SearchResultsNoResult"
+#~ msgstr "No results"

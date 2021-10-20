@@ -1,13 +1,16 @@
 <!--templates/home.html-->
 {% extends 'base.html' %}
 
+{% load i18n %}
+
 {% block breadcrumb %}
 <li class="breadcrumb-item active" aria-current="page">{% trans 'BreadcrumbHomePage' %}</li>
 {% endblock breadcrumb %}
 
 {% block content %}
-{% trans 'HomePageMainText' %}
 {% trans 'HomePageAboutText' %}
+
+{% blocktrans %}
 <p>
     Лаборатория структуры и функции митохондрий<br>
     Научно-исследовательского института физико-химической биологии им.А.Н.Белозерского<br>
@@ -25,4 +28,5 @@
     <li>редокс-статуса</li>
     <li>дифференцировке и других сторонах биологии клетки</li>
 </ul>
+{% endblocktrans %}
 {% endblock content %}

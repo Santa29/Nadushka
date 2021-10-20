@@ -8,54 +8,178 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-14 17:10+0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2021-10-20 13:38+0300\n"
+"PO-Revision-Date: 2021-10-20 13:40+0000\n"
+"Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
-"%100>=11 && n%100<=14)? 2 : 3);\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+"X-Translated-Using: django-rosetta 0.9.7\n"
 
-#: .\templates\author_detail.html:7 .\templates\authors.html:6
+#: .\proj\settings.py:126
+msgid "English"
+msgstr "Английский"
+
+#: .\proj\settings.py:127
+msgid "Russian"
+msgstr "Русский"
+
+#: .\templates\author_detail.html:8 .\templates\authors.html:8
+#: .\templates\contacts.html:8 .\templates\home.html:7
+#: .\templates\public.html:8 .\templates\public_detail.html:8
+#: .\templates\search_results.html:8
 msgid "BreadcrumbHomePage"
-msgstr ""
+msgstr "Главная"
 
-#: .\templates\author_detail.html:8 .\templates\authors.html:7
+#: .\templates\author_detail.html:9 .\templates\authors.html:9
 msgid "BreadcrumbAuthorList"
-msgstr ""
+msgstr "Авторы"
 
-#: .\templates\authors.html:37
+#: .\templates\authors.html:24
+msgid "IstinaReferense"
+msgstr "Истина"
+
+#: .\templates\authors.html:27
+msgid "GoogleSholarReferense"
+msgstr "Google Sholar"
+
+#: .\templates\authors.html:46
 msgid "ArticleDetailLink"
-msgstr ""
+msgstr "Подробности о статье"
 
-#: .\templates\authors.html:38
+#: .\templates\authors.html:47
 msgid "Link"
-msgstr ""
+msgstr "Ссылка"
 
-#: .\templates\base.html:16
+#: .\templates\base.html:19
 msgid "LabName"
-msgstr ""
-
-#: .\templates\base.html:24
-msgid "NavBarHomePage"
-msgstr ""
-
-#: .\templates\base.html:24
-msgid "BaseTemplateCurrent"
-msgstr ""
+msgstr "ЛСФМ"
 
 #: .\templates\base.html:27
-msgid "NavBarPublicList"
-msgstr ""
+msgid "NavBarHomePage"
+msgstr "Главная"
+
+#: .\templates\base.html:27
+msgid "BaseTemplateCurrent"
+msgstr "(текущая)"
 
 #: .\templates\base.html:30
-msgid "NavBarContacts"
-msgstr ""
+msgid "NavBarPublicList"
+msgstr "Публикации"
 
 #: .\templates\base.html:33
+msgid "NavBarContacts"
+msgstr "Контакты"
+
+#: .\templates\base.html:36
 msgid "NavBarAuthorsList"
+msgstr "Авторы"
+
+#: .\templates\base.html:41
+msgid "Language"
+msgstr "Язык"
+
+#: .\templates\base.html:56
+msgid ""
+"\n"
+"          <h1 class=\"display-4\">Laboratory of structure and functions of mitochondria</h1>\n"
+"          <p class=\"lead\">A. N. Belozersky Research Institute of Physico-Chemical Biology MSU</p>\n"
+"          "
 msgstr ""
+"\n"
+"<h1 class=\"display-4\">Лаборатория структуры и функций митохондрий</h1>\n"
+"<p class=\"lead\">Научно-исследовательский институт физико-химической биологии им. А.Н. Белозерского</p>"
+
+#: .\templates\base.html:61
+msgid "Team"
+msgstr "Наша команда"
+
+#: .\templates\base.html:96
+msgid ""
+"\n"
+"          <address>\n"
+"            <strong>LSFM</strong><br />\n"
+"            MSU, FBB<br />\n"
+"            119992 г. Москва, ГСП-2, Ленинские горы МГУ 1, стр. 73, НИИ ФХБ им.А.Н.Белозерского, комната 530. <br />\n"
+"            <abbr title=\"Phone\">P:</abbr> (495) 939-59-44\n"
+"          </address>\n"
+"          "
+msgstr ""
+"\n"
+"<address>\n"
+"<strong>LSFM</strong><br />\n"
+"MSU, FBB<br />\n"
+"119992 г. Москва, ГСП-2, Ленинские горы МГУ 1, стр. 73, НИИ ФХБ им.А.Н.Белозерского, комната 530. <br />\n"
+"<abbr title=\"Phone\">Т:</abbr> (495) 939-59-44\n"
+"</address>"
+
+#: .\templates\contacts.html:9
+msgid "BreacrumbContacts"
+msgstr "Контакты"
+
+#: .\templates\contacts.html:13
+msgid "ContactsMainPage"
+msgstr "Контакты лаборатории"
+
+#: .\templates\home.html:11
+msgid "HomePageAboutText"
+msgstr "Тут тоже что-то про лабу"
+
+#: .\templates\home.html:13
+msgid ""
+"\n"
+"<p>\n"
+"    Лаборатория структуры и функции митохондрий<br>\n"
+"    Научно-исследовательского института физико-химической биологии им.А.Н.Белозерского<br>\n"
+"    Московского государственного университета основана в 1996 г.<br>\n"
+"    и является одним из подразделений отдела биоэнергетики.<br>\n"
+"</p>\n"
+"\n"
+"<p>Лаборатория занмается исследованием всех аспектов функционирования митохондрий в норме и при патологических состояниях.</p>\n"
+"<p>Выяснением роли этих органелл в развитии</p>\n"
+"<ul>\n"
+"    <li>нейрологических</li>\n"
+"    <li>почечных</li>\n"
+"    <li>сердечно-сосудистых заболеваний</li>\n"
+"    <li>регуляции клеточного гомеостаза</li>\n"
+"    <li>редокс-статуса</li>\n"
+"    <li>дифференцировке и других сторонах биологии клетки</li>\n"
+"</ul>\n"
+msgstr ""
+"\n"
+"<p>\n"
+"Лаборатория структуры и функции митохондрий<br>\n"
+"Научно-исследовательского института физико-химической биологии им.А.Н.Белозерского<br>\n"
+"Московского государственного университета основана в 1996 г.<br>\n"
+"и является одним из подразделений отдела биоэнергетики.<br>\n"
+"</p>\n"
+"\n"
+"<p>Лаборатория занмается исследованием всех аспектов функционирования митохондрий в норме и при патологических состояниях.</p>\n"
+"<p>Выяснением роли этих органелл в развитии</p>\n"
+"<ul>\n"
+"<li>нейрологических</li>\n"
+"<li>почечных</li>\n"
+"<li>сердечно-сосудистых заболеваний</li>\n"
+"<li>регуляции клеточного гомеостаза</li>\n"
+"<li>редокс-статуса</li>\n"
+"<li>дифференцировке и других сторонах биологии клетки</li>\n"
+"</ul>\n"
+
+#: .\templates\public.html:9 .\templates\public_detail.html:9
+msgid "BreadcrumbPublicList"
+msgstr "Публикации"
+
+#: .\templates\public.html:23 .\templates\search_results.html:24
+msgid "PublicAuthorListLink"
+msgstr "Авторы"
+
+#: .\templates\search_results.html:9
+msgid "BreadcrumbSearch"
+msgstr "Поиск"
+
+#: .\templates\search_results.html:33
+msgid "SearchResultsNoResult"
+msgstr "Нет результатов"

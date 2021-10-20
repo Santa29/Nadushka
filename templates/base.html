@@ -12,6 +12,9 @@
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+            {% get_current_language as LANGUAGE_CODE %}
+            {% get_available_languages as LANGUAGES %}
+            {% get_language_info_list for LANGUAGES as languages %}
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
           <a class="navbar-brand" href="{% url 'home' %}">{% trans 'LabName' %}</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,6 +36,16 @@
                 <a class="nav-link" href="{% url 'authors_list' %}">{% trans 'NavBarAuthorsList' %}</a>
               </li>
             </ul>
+            <div class="dropdown show">
+              <a class="btn btn-success dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                {% trans "Language" %}:
+              </a>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                {% for language in languages %}
+                <a class="dropdown-item" href="/{{ language.code }}/"{% if language.code == LANGUAGE_CODE %} class="selected"{% endif %}>{{ language.name_local }}</a>
+                {% endfor %}
+              </div>
+            </div>
             <form action="{% url 'search' %}" class="form-inline my-2 my-lg-0" method="get">
               <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="q">
               <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
@@ -40,10 +53,12 @@
           </div>
         </nav>
         <div class="jumbotron" style="background-color: #B0E0E6;">
+          {% blocktrans %}
           <h1 class="display-4">Laboratory of structure and functions of mitochondria</h1>
           <p class="lead">A. N. Belozersky Research Institute of Physico-Chemical Biology MSU</p>
+          {% endblocktrans %}
           <hr class="my-4">
-          <a class="btn btn-primary btn-lg" href="{% url 'authors_list' %}" role="button">Our team</a>
+          <a class="btn btn-primary btn-lg" href="{% url 'authors_list' %}" role="button">{% trans 'Team' %}</a>
         </div>
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
@@ -78,12 +93,14 @@
     <footer>
         <div class="row justify-content-center" style="background-color: #B0E0E6;">
           <div class="col-12-xs-5">
-            <address>
-              <strong>LSFM</strong><br />
-              MSU, FBB<br />
-              119992 г. Москва, ГСП-2, Ленинские горы МГУ 1, стр. 73, НИИ ФХБ им.А.Н.Белозерского, комната 530. <br />
-              <abbr title="Phone">P:</abbr> (495) 939-59-44
-            </address>
+          {% blocktrans %}
+          <address>
+            <strong>LSFM</strong><br />
+            MSU, FBB<br />
+            119992 г. Москва, ГСП-2, Ленинские горы МГУ 1, стр. 73, НИИ ФХБ им.А.Н.Белозерского, комната 530. <br />
+            <abbr title="Phone">P:</abbr> (495) 939-59-44
+          </address>
+          {% endblocktrans %}
           </div>
         </div>
     </footer>

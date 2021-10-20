@@ -8,56 +8,172 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-14 17:10+0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2021-10-20 13:38+0300\n"
+"PO-Revision-Date: 2021-10-20 13:39+0000\n"
+"Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Translated-Using: django-rosetta 0.9.7\n"
 
-#: .\templates\author_detail.html:7 .\templates\authors.html:6
-#, fuzzy
-#| msgid "NavBarHomePage"
+#: .\proj\settings.py:126
+msgid "English"
+msgstr "English"
+
+#: .\proj\settings.py:127
+msgid "Russian"
+msgstr "Russian"
+
+#: .\templates\author_detail.html:8 .\templates\authors.html:8
+#: .\templates\contacts.html:8 .\templates\home.html:7
+#: .\templates\public.html:8 .\templates\public_detail.html:8
+#: .\templates\search_results.html:8
 msgid "BreadcrumbHomePage"
-msgstr "Homepage"
+msgstr "Home"
 
-#: .\templates\author_detail.html:8 .\templates\authors.html:7
-#, fuzzy
-#| msgid "NavBarAuthorsList"
+#: .\templates\author_detail.html:9 .\templates\authors.html:9
 msgid "BreadcrumbAuthorList"
 msgstr "Authors"
 
-#: .\templates\authors.html:37
+#: .\templates\authors.html:24
+msgid "IstinaReferense"
+msgstr "Istina"
+
+#: .\templates\authors.html:27
+msgid "GoogleSholarReferense"
+msgstr "Google Sholar"
+
+#: .\templates\authors.html:46
 msgid "ArticleDetailLink"
-msgstr ""
+msgstr "Detail"
 
-#: .\templates\authors.html:38
+#: .\templates\authors.html:47
 msgid "Link"
-msgstr ""
+msgstr "Link"
 
-#: .\templates\base.html:16
+#: .\templates\base.html:19
 msgid "LabName"
-msgstr "LSFW"
+msgstr "LSFM"
 
-#: .\templates\base.html:24
+#: .\templates\base.html:27
 msgid "NavBarHomePage"
-msgstr "Homepage"
+msgstr "Home"
 
-#: .\templates\base.html:24
+#: .\templates\base.html:27
 msgid "BaseTemplateCurrent"
 msgstr "(current)"
 
-#: .\templates\base.html:27
+#: .\templates\base.html:30
 msgid "NavBarPublicList"
 msgstr "Publications"
 
-#: .\templates\base.html:30
+#: .\templates\base.html:33
 msgid "NavBarContacts"
 msgstr "Contacts"
 
-#: .\templates\base.html:33
+#: .\templates\base.html:36
 msgid "NavBarAuthorsList"
 msgstr "Authors"
+
+#: .\templates\base.html:41
+msgid "Language"
+msgstr "Language"
+
+#: .\templates\base.html:56
+msgid ""
+"\n"
+"          <h1 class=\"display-4\">Laboratory of structure and functions of mitochondria</h1>\n"
+"          <p class=\"lead\">A. N. Belozersky Research Institute of Physico-Chemical Biology MSU</p>\n"
+"          "
+msgstr ""
+"\n"
+"<h1 class=\"display-4\">Laboratory of structure and functions of mitochondria</h1>\n"
+"<p class=\"lead\">A. N. Belozersky Research Institute of Physico-Chemical Biology MSU</p>"
+
+#: .\templates\base.html:61
+msgid "Team"
+msgstr "Our team"
+
+#: .\templates\base.html:96
+msgid ""
+"\n"
+"          <address>\n"
+"            <strong>LSFM</strong><br />\n"
+"            MSU, FBB<br />\n"
+"            119992 г. Москва, ГСП-2, Ленинские горы МГУ 1, стр. 73, НИИ ФХБ им.А.Н.Белозерского, комната 530. <br />\n"
+"            <abbr title=\"Phone\">P:</abbr> (495) 939-59-44\n"
+"          </address>\n"
+"          "
+msgstr ""
+"\n"
+"<address>\n"
+"<strong>LSFM</strong><br />\n"
+"MSU, FBB<br />\n"
+"119992 Moskow state, 119992, Moscow, Leninskye gory, house 1, A.N. Belozersky Research Institute, room 530. <br />\n"
+"<abbr title=\"Phone\">P:</abbr> (495) 939-59-44\n"
+"</address>"
+
+#: .\templates\contacts.html:9
+msgid "BreacrumbContacts"
+msgstr "Contacts"
+
+#: .\templates\contacts.html:13
+msgid "ContactsMainPage"
+msgstr "Here may be your text..."
+
+#: .\templates\home.html:11
+msgid "HomePageAboutText"
+msgstr "Here is smth about lab"
+
+#: .\templates\home.html:13
+msgid ""
+"\n"
+"<p>\n"
+"    Лаборатория структуры и функции митохондрий<br>\n"
+"    Научно-исследовательского института физико-химической биологии им.А.Н.Белозерского<br>\n"
+"    Московского государственного университета основана в 1996 г.<br>\n"
+"    и является одним из подразделений отдела биоэнергетики.<br>\n"
+"</p>\n"
+"\n"
+"<p>Лаборатория занмается исследованием всех аспектов функционирования митохондрий в норме и при патологических состояниях.</p>\n"
+"<p>Выяснением роли этих органелл в развитии</p>\n"
+"<ul>\n"
+"    <li>нейрологических</li>\n"
+"    <li>почечных</li>\n"
+"    <li>сердечно-сосудистых заболеваний</li>\n"
+"    <li>регуляции клеточного гомеостаза</li>\n"
+"    <li>редокс-статуса</li>\n"
+"    <li>дифференцировке и других сторонах биологии клетки</li>\n"
+"</ul>\n"
+msgstr ""
+"\n"
+"<p>\n"
+"Laboratory of structure and functions of Mitohondry<br>\n"
+"...<br>\n"
+"...<br>\n"
+"...<br>\n"
+"\n"
+"<p>Laboratory research all aspects of mitochondrial functionality in normal and pathology status\n"
+"<p>We want to know the role of these organelles:\n"
+"<li>...</li>\n"
+"<li>...</li>\n"
+"<li>...</li>\n"
+
+#: .\templates\public.html:9 .\templates\public_detail.html:9
+msgid "BreadcrumbPublicList"
+msgstr "Publications"
+
+#: .\templates\public.html:23 .\templates\search_results.html:24
+msgid "PublicAuthorListLink"
+msgstr "Authors"
+
+#: .\templates\search_results.html:9
+msgid "BreadcrumbSearch"
+msgstr "Search"
+
+#: .\templates\search_results.html:33
+msgid "SearchResultsNoResult"
+msgstr "No results"

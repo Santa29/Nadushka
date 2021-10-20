@@ -1,0 +1,188 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-20 13:38+0300\n"
+"PO-Revision-Date: 2021-10-19 17:10+0000\n"
+"Last-Translator:   <>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+"X-Translated-Using: django-rosetta 0.9.7\n"
+
+#: .\posts\models.py:10
+msgid "ФИО"
+msgstr "ФИО"
+
+#: .\posts\models.py:11
+msgid "Изображение"
+msgstr "Изображение"
+
+#: .\posts\models.py:12
+msgid "Должность"
+msgstr "Должность"
+
+#: .\posts\models.py:13
+msgid "Описание"
+msgstr "Описание"
+
+#: .\posts\models.py:14
+msgid "Аббривеатура"
+msgstr "Аббривеатура"
+
+#: .\posts\models.py:15
+msgid "Ссылка на сотрудника в системе истина"
+msgstr "Ссылка на сотрудника в системе истина"
+
+#: .\posts\models.py:16
+msgid "Имя на английском с заглавной буквы"
+msgstr "Имя на английском с заглавной буквы"
+
+#: .\posts\models.py:17
+msgid "Фамилия на английском с заглавной буквы"
+msgstr "Фамилия на английском с заглавной буквы"
+
+#: .\posts\models.py:18
+msgid "Отчество на английском с заглавной буквы"
+msgstr "Отчество на английском с заглавной буквы"
+
+#: .\posts\models.py:19
+msgid "Ссылка на сотрудника в системе Google Sholar"
+msgstr "Ссылка на сотрудника в системе Google Sholar"
+
+#: .\posts\models.py:28
+msgid "Автор"
+msgstr "Автор"
+
+#: .\posts\models.py:29
+msgid "Авторы"
+msgstr "Авторы"
+
+#: .\posts\models.py:33
+msgid "Название"
+msgstr "Название"
+
+#: .\posts\models.py:34
+msgid "Дата написания"
+msgstr "Дата написания"
+
+#: .\posts\models.py:37
+msgid "Журнал"
+msgstr "Журнал"
+
+#: .\posts\models.py:38
+msgid "Абстракт"
+msgstr "Абстракт"
+
+#: .\posts\models.py:48
+msgid "Статья"
+msgstr "Статья"
+
+#: .\posts\models.py:49
+msgid "Статьи"
+msgstr "Статьи"
+
+#~ msgid "BreadcrumbHomePage"
+#~ msgstr "Главная страница"
+
+#~ msgid "BreadcrumbAuthorList"
+#~ msgstr "Список сотрудников"
+
+#~ msgid "ArticleDetailLink"
+#~ msgstr "Подробнее о статье"
+
+#~ msgid "Link"
+#~ msgstr "Ссылка"
+
+#~ msgid "LabName"
+#~ msgstr "Лаборатория структуры и функций митохондрий"
+
+#~ msgid "NavBarHomePage"
+#~ msgstr "Главная страница"
+
+#~ msgid "BaseTemplateCurrent"
+#~ msgstr "(текущая)"
+
+#~ msgid "NavBarPublicList"
+#~ msgstr "Список публикаций лабаротории"
+
+#~ msgid "NavBarContacts"
+#~ msgstr "Контакты"
+
+#~ msgid "NavBarAuthorsList"
+#~ msgstr "Список авторов"
+
+#~ msgid "BreacrumbContacts"
+#~ msgstr "Контакты"
+
+#~ msgid "ContactsMainPage"
+#~ msgstr "Контакты"
+
+#~ msgid "HomePageAboutText"
+#~ msgstr "Здесь написать коротенько про лабораторию"
+
+#~ msgid ""
+#~ "\n"
+#~ "<p>\n"
+#~ "    Лаборатория структуры и функции митохондрий<br>\n"
+#~ "    Научно-исследовательского института физико-химической биологии им.А.Н."
+#~ "Белозерского<br>\n"
+#~ "    Московского государственного университета основана в 1996 г.<br>\n"
+#~ "    и является одним из подразделений отдела биоэнергетики.<br>\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<p>Лаборатория занмается исследованием всех аспектов функционирования "
+#~ "митохондрий в норме и при патологических состояниях.</p>\n"
+#~ "<p>Выяснением роли этих органелл в развитии</p>\n"
+#~ "<ul>\n"
+#~ "    <li>нейрологических</li>\n"
+#~ "    <li>почечных</li>\n"
+#~ "    <li>сердечно-сосудистых заболеваний</li>\n"
+#~ "    <li>регуляции клеточного гомеостаза</li>\n"
+#~ "    <li>редокс-статуса</li>\n"
+#~ "    <li>дифференцировке и других сторонах биологии клетки</li>\n"
+#~ "</ul>\n"
+#~ msgstr ""
+#~ "\n"
+#~ "<p>\n"
+#~ "    Лаборатория структуры и функции митохондрий<br>\n"
+#~ "    Научно-исследовательского института физико-химической биологии им.А.Н."
+#~ "Белозерского<br>\n"
+#~ "    Московского государственного университета основана в 1996 г.<br>\n"
+#~ "    и является одним из подразделений отдела биоэнергетики.<br>\n"
+#~ "</p>\n"
+#~ "\n"
+#~ "<p>Лаборатория занмается исследованием всех аспектов функционирования "
+#~ "митохондрий в норме и при патологических состояниях.</p>\n"
+#~ "<p>Выяснением роли этих органелл в развитии</p>\n"
+#~ "<ul>\n"
+#~ "    <li>нейрологических</li>\n"
+#~ "    <li>почечных</li>\n"
+#~ "    <li>сердечно-сосудистых заболеваний</li>\n"
+#~ "    <li>регуляции клеточного гомеостаза</li>\n"
+#~ "    <li>редокс-статуса</li>\n"
+#~ "    <li>дифференцировке и других сторонах биологии клетки</li>\n"
+#~ "</ul>\n"
+
+#~ msgid "BreadcrumbPublicList"
+#~ msgstr "Список публикаций"
+
+#~ msgid "PublicAuthorListLink"
+#~ msgstr "Ссылка"
+
+#~ msgid "BreadcrumbSearch"
+#~ msgstr "Поиск"
+
+#~ msgid "SearchResultsNoResult"
+#~ msgstr "Нет результатов"

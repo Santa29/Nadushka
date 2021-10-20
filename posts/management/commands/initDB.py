@@ -15,7 +15,8 @@ class Command(BaseCommand):
                 istina_author_ref = "https://istina.msu.ru/profile/pleg/",
                 firstname = "Egor",
                 lastname = "Plotnikov",
-                thirdname = "Yurievich"
+                thirdname = "Yurievich",
+                google_sholar_reference = ''
                 )
             )
 
@@ -29,7 +30,8 @@ class Command(BaseCommand):
                 istina_author_ref = "https://istina.msu.ru/profile/zorov/",
                 firstname = "Dmitry",
                 lastname = "Zorov",
-                thirdname = "Borisovich"
+                thirdname = "Borisovich",
+                google_sholar_reference = ''
                 )
             )
 
@@ -43,7 +45,8 @@ class Command(BaseCommand):
                 istina_author_ref = "https://istina.msu.ru/profile/lju/",
                 firstname = "Ljubava",
                 lastname = "Zorova",
-                thirdname = "Dmitrievna"
+                thirdname = "Dmitrievna",
+                google_sholar_reference = ''
                 )
             )
 
@@ -57,7 +60,8 @@ class Command(BaseCommand):
                 istina_author_ref = "https://istina.msu.ru/profile/Pevzner_IB/",
                 firstname = "Irina",
                 lastname = "Pevzner",
-                thirdname = "Borisovna"
+                thirdname = "Borisovna",
+                google_sholar_reference = ''
                 )
             )
 
@@ -71,7 +75,8 @@ class Command(BaseCommand):
                 istina_author_ref = "https://istina.msu.ru/profile/SilachevDN/",
                 firstname = "Denis",
                 lastname = "Silachev",
-                thirdname = "Nikolaevich"
+                thirdname = "Nikolaevich",
+                google_sholar_reference = ''
                 )
             )
 
@@ -85,7 +90,8 @@ class Command(BaseCommand):
                 istina_author_ref = "https://istina.msu.ru/profile/BabenkoVA/",
                 firstname = "Valentina",
                 lastname = "Babenko",
-                thirdname = "Andreevna"
+                thirdname = "Andreevna",
+                google_sholar_reference = ''
                 )
             )
 
@@ -99,7 +105,8 @@ class Command(BaseCommand):
                 istina_author_ref = "https://istina.msu.ru/profile/popkov-v/",
                 firstname = "Vasily",
                 lastname = "Popkov",
-                thirdname = "Andreevich"
+                thirdname = "Andreevich",
+                google_sholar_reference = ''
                 )
             )
 
@@ -113,7 +120,8 @@ class Command(BaseCommand):
                 istina_author_ref = "https://istina.msu.ru/profile/andnadya/",
                 firstname = "Nadezhda",
                 lastname = "Andrianova",
-                thirdname = "Vladimirovna"
+                thirdname = "Vladimirovna",
+                google_sholar_reference = 'https://scholar.google.ru/citations?user=qfFhqnoAAAAJ&hl=ru&oi=sra'
                 )
             )
 
@@ -127,6 +135,7 @@ class Command(BaseCommand):
                 istina_author_ref = "https://istina.msu.ru/profile/brezgunova/",
                 firstname = "Anna",
                 lastname = "Brezgunova",
-                thirdname = "Aleksandrovna"
+                thirdname = "Aleksandrovna",
+                google_sholar_reference = ''
                 )
             )

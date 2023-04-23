@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
+from django.db.models.expressions import RawSQL
 
 from django.urls import reverse
 
@@ -16,7 +17,7 @@ class Author(models.Model):
     firstname = models.CharField(_("Имя на английском с заглавной буквы"), max_length=25)
     lastname = models.CharField(_("Фамилия на английском с заглавной буквы"), max_length=40)
     thirdname = models.CharField(_("Отчество на английском с заглавной буквы"), max_length=40)
-    google_sholar_reference = models.CharField(_("Ссылка на сотрудника в системе Google Sholar"), max_length=160, unique=True, blank=True, null=True)
+    wos_researcher_id = models.CharField(_("Ссылка на сотрудника в системе WOS"), max_length=160, unique=True, blank=True, null=True)
 
     def __str__(self):
         return self.name

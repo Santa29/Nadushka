@@ -72,7 +72,8 @@ class Command(BaseCommand):
                 pass
 
     def get_articles(self, list_of_MCID):
-        """This function get the dictionary which contains MCID and parse the article data from this MCID to the list of Publication objects"""
+        """This function get the dictionary which contains MCID and parse the article data from this MCID to the list
+        of Publication objects """
         base = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&WebEnv="
         tail = "&query_key=1&rettype=abstract&email=michaels17525@mail.ru"
         temporary_list_of_articles = []

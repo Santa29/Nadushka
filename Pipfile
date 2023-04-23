@@ -15,6 +15,10 @@ bs4 = "*"
 lxml = "*"
 requests = "*"
 django-environ = "*"
+scipy = "*"
+nltk = "*"
+pandas = "*"
+django-rosetta = "*"
 
 [requires]
 python_version = "3.8"

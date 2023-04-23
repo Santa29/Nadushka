@@ -12,14 +12,15 @@
 {% block content %}
 <div class="card-columns">
   {% for article in public_list %}
-    <div class = "card" style="height: 80vh;">
-      <div class="card-header" style="height: 10vh">
+    <div class = "card" style="height: 70vh;">
+      <div class="card-header" style="height: 15vh">
         <a href="{% url 'article_detail' article.pk %}">{{article.name}}</a>
+        <p>{{article.date}}</p>
       </div>
       <div class="card-body" style="height: 50vh; overflow: auto;">
         {{article.abstract}}
       </div>
-      <div class ="card-footer" style="height: 20vh; overflow: auto;">
+      <div class ="card-footer" style="height: 15vh; overflow: auto;">
         <p>{% trans 'PublicAuthorListLink' %}</p>
         {% for author in article.authors.all %}
           <li><a class="btn btn-primary" href="{% url 'author_detail' author.slug %}" role="button">{{author.name}}</a>

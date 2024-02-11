@@ -6,7 +6,7 @@
 
 <!doctype html>
     <title>LSFM</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/sandstone/bootstrap.min.css" integrity="sha384-zEpdAL7W11eTKeoBJK1g79kgl9qjP7g84KfK3AZsuonx38n8ad+f5ZgXtoSDxPOh" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'css/stylesheet.css'%}" type="text/css">
     <head>
         <!-- Required meta tags -->
@@ -52,13 +52,13 @@
             </form>
           </div>
         </nav>
-        <div class="jumbotron" style="background-color: #B0E0E6;">
+        <div class="jumbotron" style="background-color: #CAE2A6;">
           {% blocktrans %}
           <h1 class="display-4">Laboratory of structure and functions of mitochondria</h1>
           <p class="lead">A. N. Belozersky Research Institute of Physico-Chemical Biology MSU</p>
           {% endblocktrans %}
           <hr class="my-4">
-          <a class="btn btn-primary btn-lg" href="{% url 'authors_list' %}" role="button">{% trans 'Team' %}</a>
+          <a class="btn btn-success btn-lg" href="{% url 'authors_list' %}" role="button">{% trans 'Team' %}</a>
         </div>
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
@@ -91,13 +91,13 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     </body>
     <footer>
-        <div class="row justify-content-center" style="background-color: #B0E0E6;">
+        <div class="row justify-content-center" style="background-color: #CAE2A6;">
           <div class="col-12-xs-5">
           {% blocktrans %}
           <address>
             <strong>LSFM</strong><br />
-            MSU, FBB<br />
-            119992 г. Москва, ГСП-2, Ленинские горы МГУ 1, стр. 73, НИИ ФХБ им.А.Н.Белозерского, комната 530. <br />
+            MSU<br />
+            Ленинские горы МГУ 1, стр. 73, НИИ ФХБ им.А.Н.Белозерского, комната 634. <br />
             <abbr title="Phone">P:</abbr> (495) 939-59-44
           </address>
           {% endblocktrans %}

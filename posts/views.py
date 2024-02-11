@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.views.generic import TemplateView, DetailView, ListView
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.db.models import Q
+from datetime import datetime
 
 
 from .models import Article, Author
@@ -19,7 +20,9 @@ class ArticlePageView(ListView):
     paginate_by = 9
 
     def get_queryset(self):
-        queryset = Article.objects.all().order_by('-date')
+        current_year = datetime.now().year
+        last_displayed_year = current_year - 10
+        queryset = Article.objects.filter(date__year__gte=last_displayed_year, date__year__lte=current_year).order_by('-date')
         return queryset
 
 class ContactsPageView(TemplateView):
@@ -34,6 +37,10 @@ class AuthorsListView(ListView):
     model = Author
     template_name = 'authors.html'
     context_object_name = 'authors_list'
+
+    def get_queryset(self):
+        queryset = Author.objects.order_by('sequence_number')
+        return queryset
 
 class AuthorDetailView(DetailView):
     model = Author

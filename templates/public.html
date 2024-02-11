@@ -13,11 +13,11 @@
 <div class="card-columns">
   {% for article in public_list %}
     <div class = "card" style="height: 70vh;">
-      <div class="card-header" style="height: 15vh">
+      <div class="card-header" style="height: 15vh; overflow: auto;">
         <a href="{% url 'article_detail' article.pk %}">{{article.name}}</a>
         <p>{{article.date}}</p>
       </div>
-      <div class="card-body" style="height: 50vh; overflow: auto;">
+      <div class="card-body" style="height: 40vh; overflow: auto;">
         {{article.abstract}}
       </div>
       <div class ="card-footer" style="height: 15vh; overflow: auto;">

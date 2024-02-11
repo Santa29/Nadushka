@@ -2,8 +2,8 @@
 FROM python:3.8.5-alpine
 
 # set work directory
-RUN mkdir /var/app
-WORKDIR  /var/app
+RUN mkdir /var/nadia
+WORKDIR  /var/nadia
 
 # set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
@@ -11,14 +11,10 @@ ENV PYTHONUNBUFFERED 1
 
 # install dependencies
 RUN pip install --upgrade pip
-COPY requierements.txt /var/app/requierements.txt
-RUN apk update && apk add --no-cache --virtual build-deps python3-dev musl-dev && apk add postgresql-dev
-RUN apk add --update --no-cache g++ libxslt-dev
-RUN apk --update add libxml2-dev libffi-dev gcc musl-dev libgcc openssl-dev curl
-RUN apk add jpeg-dev zlib-dev freetype-dev lcms2-dev openjpeg-dev tiff-dev tk-dev tcl-dev
+COPY requierements.txt /var/nadia/requierements.txt
 RUN pip install -r requierements.txt
 
-COPY . /var/app/.
+COPY . /var/nadia/.
 
 EXPOSE 8000
 

@@ -101,7 +101,7 @@ class Command(BaseCommand):
                 name=" Семенович Дмитрий Сергеевич",
                 image="authors/semenovich.jpg",
                 position="Научный сотрудник",
-                slug="Semenovich",
+                slug="SemenovichDS",
                 istina_author_ref="https://istina.msu.ru/profile/semenovich/",
                 firstname="Dmitry",
                 lastname="Semenovich",
@@ -136,7 +136,7 @@ class Command(BaseCommand):
                 firstname="Anna",
                 lastname="Brezgunova",
                 thirdname="Aleksandrovna",
-                wos_researcher_id='https://publons.com/researcher/1768766/egor-y-plotnikov/'
+                wos_researcher_id='https://publons.com/researcher/brezgunova/'
             )
         )
 
@@ -151,7 +151,7 @@ class Command(BaseCommand):
                 firstname="Xinyu",
                 lastname="Liao",
                 thirdname="N",
-                wos_researcher_id='https://publons.com/researcher/1768766/egor-y-plotnikov/'
+                wos_researcher_id='https://publons.com/researcher/cancansan/'
             )
         )
 
@@ -166,50 +166,50 @@ class Command(BaseCommand):
                 firstname="Marina",
                 lastname="Buyan",
                 thirdname="Igorevna",
-                wos_researcher_id='https://publons.com/researcher/1768766/egor-y-plotnikov/'
+                wos_researcher_id='https://publons.com/researcher/MarinaNenartovich/'
             )
         )
 
         Author.objects.update_or_create(
-            name="Алексей Бочарников",
+            name="Алексей Дмитриевич Бочарников",
             defaults=dict(
                 name="Алексей Дмитриевич Бочарников",
                 image="authors/bocharnikov.jpg",
                 position="Студент",
                 slug="Bocharnikov",
-                istina_author_ref="https://istina.msu.ru/profile/pleg/",
+                istina_author_ref="https://istina.msu.ru/profile/bocharnikovAD/",
                 firstname="Alexei",
                 lastname="Bocharnikov",
                 thirdname=" ",
-                wos_researcher_id='https://publons.com/researcher/1768766/egor-y-plotnikov/'
+                wos_researcher_id='https://publons.com/researcher/bocharnikovAD/'
             )
         )
         Author.objects.update_or_create(
-            name="Никита Загородников",
+            name="Никита Загородников Неизвестный",
             defaults=dict(
-                name="Никита Загородников",
+                name="Никита Загородников Неизвестный",
                 image="authors/zagorodnikov.jpg",
                 position="Студент",
                 slug="Zagorodnikov",
-                istina_author_ref="https://istina.msu.ru/profile/pleg/",
+                istina_author_ref="https://istina.msu.ru/profile/zagorodnikovNZ/",
                 firstname="Nikita",
                 lastname="Zagorodnikov",
                 thirdname=" ",
-                wos_researcher_id='https://publons.com/researcher/1768766/egor-y-plotnikov/'
+                wos_researcher_id='https://publons.com/researcher/zagorodnikovNZ/'
             )
         )
         Author.objects.update_or_create(
-            name="Анна Ломакина",
+            name="Анна Ломакина Неизвестная",
             defaults=dict(
-                name="Анна Ломакина",
+                name="Анна Ломакина Неизвестная",
                 image="authors/lomakina.jpg",
                 position="Студент",
                 slug="Lomakina",
-                istina_author_ref="https://istina.msu.ru/profile/pleg/",
+                istina_author_ref="https://istina.msu.ru/profile/LomakinaAN/",
                 firstname="Anna",
                 lastname="Lomakina",
                 thirdname=" ",
-                wos_researcher_id='https://publons.com/researcher/1768766/egor-y-plotnikov/'
+                wos_researcher_id='https://publons.com/researcher/LomakinaAN/'
             )
         )
 
@@ -220,11 +220,11 @@ class Command(BaseCommand):
                 image="authors/petruxa.jpg",
                 position="Студент",
                 slug="Petruchina",
-                istina_author_ref="https://istina.msu.ru/profile/pleg/",
+                istina_author_ref="https://istina.msu.ru/profile/PetruchinaAS/",
                 firstname="Alexandra",
                 lastname="Petruchina",
                 thirdname="Serggevna",
-                wos_researcher_id='https://publons.com/researcher/1768766/egor-y-plotnikov/'
+                wos_researcher_id='https://publons.com/researcher/PetruchinaAS/'
             )
         )
 
@@ -235,11 +235,11 @@ class Command(BaseCommand):
                 image="authors/sokolov.jpg",
                 position="Студент",
                 slug="Sokolov",
-                istina_author_ref="https://istina.msu.ru/profile/pleg/",
+                istina_author_ref="https://istina.msu.ru/profile/SokolovIA/",
                 firstname="Ilia",
                 lastname="Sokolov",
                 thirdname="Andreevich",
-                wos_researcher_id='https://publons.com/researcher/1768766/egor-y-plotnikov/'
+                wos_researcher_id='https://publons.com/researcher/SokolovIA/'
             )
         )
 
@@ -250,11 +250,11 @@ class Command(BaseCommand):
                 image="authors/cherkesova.jpg",
                 position="Студент",
                 slug="Cherkesova",
-                istina_author_ref="https://istina.msu.ru/profile/pleg/",
+                istina_author_ref="https://istina.msu.ru/profile/CherkesovaKS/",
                 firstname="Xenia",
                 lastname="Cherkesova",
                 thirdname="Sergeevna",
-                wos_researcher_id='https://publons.com/researcher/1768766/egor-y-plotnikov/'
+                wos_researcher_id='https://publons.com/researcher/CherkesovaKS/'
             )
         )
 

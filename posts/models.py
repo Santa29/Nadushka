@@ -18,6 +18,7 @@ class Author(models.Model):
     lastname = models.CharField(_("Фамилия на английском с заглавной буквы"), max_length=40)
     thirdname = models.CharField(_("Отчество на английском с заглавной буквы"), max_length=40)
     wos_researcher_id = models.CharField(_("Ссылка на сотрудника в системе WOS"), max_length=160, unique=True, blank=True, null=True)
+    sequence_number = models.IntegerField(_("Порядковый номер представления автора в списке команды"), unique=True, blank=True, null=True)
 
     def __str__(self):
         return self.name

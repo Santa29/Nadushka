@@ -29,6 +29,7 @@ class Author(models.Model):
     class Meta:
         verbose_name = _("Автор")
         verbose_name_plural = _("Авторы")
+        ordering = ['sequence_number']
 
 
 class Article(models.Model):

@@ -15,8 +15,8 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-6">
-                <div class="card" style="height: 70vh;">
-                    <div class="card-header">
+                <div class="card" style="height: 60vh;">
+                    <div class="card-header" style="height: 10vh">
                         <span class="font-weight-bold"><a href="{% url 'author_detail' author.slug %}">{{author.name}}</a></span>
                         <p>
                         <span class="text-muted">{{author.position}}</span>
@@ -28,28 +28,16 @@
                         <a href="{{author.wos_researcher_id}}">{% trans 'WOSReferense' %}</a>
                         </p>
                     </div>
-                    <div class="card-body" style="height: 60vh">
+                    <div class="card-body" style="height: 50vh">
                         <p>
                             <img src="{{ author.image.url }}" class="img-fluid" style="height: 45vh">
                         </p>
                     </div>
-                    <div class="card-footer">
-                        {{author.description}}
-                    </div>
                 </div>
             </div>
             <div class="col-sm-6">
-                <div class="card" style="height: 70vh; overflow: auto;">
-                    {% for article in author.article_authors.all %}
-                    {% if article.date.year > 2014 %}
-                        <p>{{article.name}}</p>
-                        <p>
-                        ( <a href={% url 'article_detail' article.pk %}>{% trans 'ArticleDetailLink' %}</a> |
-                        <a href="{{article.url}}">{% trans 'Link' %}</a> |
-                        {{article.date}} )
-                        </p>
-                    {% endif %}
-                    {% endfor %}
+                <div class="card" style="height: 60vh; overflow: auto;">
+                    {{author.description}}
                 </div>
             </div>
         </div>
